@@ -1,4 +1,7 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 @layer base{
   @font-face {
@@ -17,30 +20,40 @@
     src: url("/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("ttf");
   }
 
-  .D1{
-    @apply text-6xl 
+
+  *{
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+
+  html{
+    @apply w-screen h-screen m-0 p-0 overflow-y-auto overflow-x-hidden scroll-smooth snap-y snap-mandatory
   }
 
   .D1{
     @apply text-5xl 
   }
 
-  h2{
-    @apply text-3xl
+  .D2{
+    @apply text-4xl 
   }
-}
 
-@tailwind components;
-@tailwind utilities;
+  h2{
+    @apply text-2xl
+  }
+  h3{
+    @apply text-xl
+  }
 
-body,html{
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
+  h4{
+    @apply text-lg
+  }
 
-*{
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
+  p.sm{
+    @apply text-xs font-normal leading-6 text-dark-500
+  }
+
+  blockquote{
+    @apply text-sm font-normal leading-7 
+  }
 }

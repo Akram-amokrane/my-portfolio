@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="h-screen w-full flex justify-between items-center bg-white">
+    <div className="snap-always snap-center h-screen w-full flex justify-between items-center bg-white " id="home">
         <div className="z-10">
             <div>
             <div className="D1 font-semibold whitespace-nowrap">HEY, I AM</div>
