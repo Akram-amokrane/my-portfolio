@@ -20,7 +20,7 @@ export default function Projects() {
         <Swiper
           spaceBetween={30}
           effect={"coverflow"}
-          navigation={true}
+          navigation={{ enabled: true }}
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
@@ -32,7 +32,7 @@ export default function Projects() {
             slideShadows: false,
           }}
           pagination={true}
-          modules={[EffectCoverflow, Pagination]}
+          modules={[EffectCoverflow, Pagination, Navigation]}
           className="mySwiper"
         >
           {data.map((p, i) => (
