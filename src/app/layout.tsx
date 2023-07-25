@@ -3,6 +3,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
+import {register} from "swiper/element/bundle"
+
+register()
 
 const inter = Montserrat({ subsets: ['latin'] })
 

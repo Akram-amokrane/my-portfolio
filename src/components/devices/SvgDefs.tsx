@@ -1,0 +1,44 @@
+export default function SvgDefs() {
+  return (
+    <svg width="0" height="0" viewBox="0 0 3316 1942">
+      <defs>
+        <image
+          id="chomerce-account"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/chomerce/account.jpeg"
+        />
+        <image
+          id="chomerce-home"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/chomerce/home.jpeg"
+        />
+        <image
+          id="chomerce-cart"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/chomerce/cart.jpeg"
+        />
+        <image
+          id="chomerce-admin"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/chomerce/admin.jpeg"
+        />
+        <image
+          id="epb-login"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/epb/login.png"
+        />
+        <image
+          id="epb-emb"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/epb/emb.png"
+        />
+      </defs>
+    </svg>
+  );
+}

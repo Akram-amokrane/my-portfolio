@@ -38,6 +38,10 @@
     @apply text-4xl 
   }
 
+  h1{
+    @apply text-3xl
+  }
+
   h2{
     @apply text-2xl
   }
@@ -49,11 +53,22 @@
     @apply text-lg
   }
 
+  p{
+    @apply text-base
+  }
+
+  p.small{
+    @apply text-sm
+  }
+
   p.sm{
-    @apply text-xs font-normal leading-6 text-dark-500
+    @apply text-xs font-normal leading-6 
   }
 
   blockquote{
     @apply text-sm font-normal leading-7 
   }
+
+  
 }
+
