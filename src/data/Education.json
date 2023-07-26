@@ -1,0 +1,40 @@
+{
+  "degrees": [
+    {
+      "date": "2017-2018",
+      "title": "High school diploma",
+      "from": "Kadi Athmane High School,Tichy"
+    },
+    {
+      "date": "2020-2021",
+      "title": "Bachelor's degree in si",
+      "from": "Abderrahmane Mira University,Bejaia"
+    },
+    {
+      "date": "2022-2023",
+      "title": "master's degree in sia",
+      "from": "Abderrahmane Mira University,Bejaia"
+    }
+  ],
+  "skills": [
+    "Javascript",
+    "Typescript",
+    "Angular",
+    "React",
+    "NodeJs",
+    "Express",
+    "Ionic",
+    "Tauri",
+    "Sass",
+    "Kotlin",
+    "Flutter",
+    "Python",
+    "Flask",
+    "TensorFlow",
+    "JavaFx",
+    "Firebase",
+    "MySql",
+    "MongoDb",
+    "Figma"
+  ]
+}
