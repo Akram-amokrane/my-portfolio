@@ -23,6 +23,7 @@ export default function Projects() {
           navigation={{ enabled: true }}
           grabCursor={true}
           centeredSlides={true}
+          loop={true}
           slidesPerView={"auto"}
           coverflowEffect={{
             rotate: 50,
