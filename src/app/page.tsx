@@ -12,7 +12,7 @@ export default function Main() {
   return (
     <>
       <NavBar></NavBar>
-      <div className="container mx-auto h-auto px-2 sm:px-0 lg:px-32 overflow-auto flex flex-col justify-center  bg-white">
+      <div className="container mx-auto w-full h-auto px-2 sm:px-0 lg:px-32 overflow-y-auto overflow-x-hidden flex flex-col justify-center  bg-white">
         <Home></Home>
         <AboutMe></AboutMe>
         <Education></Education>

@@ -45,7 +45,6 @@ export default function NavBar() {
 
   const scrolltoHash = function (element_id: string) {
     const element = document.getElementById(element_id);
-    console.log(element);
     element?.scrollIntoView({
       behavior: "smooth",
       block: "end",
@@ -55,7 +54,7 @@ export default function NavBar() {
 
   return (
     <nav className="container fixed bg-white z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between items-center w-full  md:w-4/5 lg:w-3/4 h-fit  px-3 py-2 rounded-b-xl sm:rounded-2xl shadow-md shadow-dark-100 ">
-      <div className="relative w-16 h-12">
+      <div className="relative w-12 h-8 sm:w-16 sm:h-12">
         <Image src="/images/logo.svg" alt="my logo" fill={true} />
       </div>
 
@@ -79,7 +78,7 @@ export default function NavBar() {
             >
               <div>
                 {
-                  <link.icon className="md:hidden w-8 h-8 mx-3 sm:mx-5 md:mx-8"></link.icon>
+                  <link.icon className="md:hidden w-6 h-6 sm:w-8 sm:h-8 mx-3 sm:mx-5 md:mx-8"></link.icon>
                 }
               </div>
               <div className="hidden md:block">{link.name}</div>
@@ -103,7 +102,7 @@ export default function NavBar() {
           onClick={() => scrolltoHash("contact")}
           className="text-xl peer-checked:text-secondary-500"
         >
-          <ChatBubbleLeftIcon className="w-8 h-8 lg:hidden"></ChatBubbleLeftIcon>
+          <ChatBubbleLeftIcon className="w-6 h-6 sm:w-8 sm:h-8 lg:hidden"></ChatBubbleLeftIcon>
 
           <div className="hidden lg:block">Contact Me</div>
         </div>

@@ -10,12 +10,11 @@ export default function Footer() {
       <div className="relative w-28 h-20">
         <Image src={"/images/logo-white.svg"} alt="logo" fill={true}></Image>
       </div>
-      <blockquote className="text-white text-center mt-4">
+      <blockquote className="w-72 md:w-2/6 text-white text-center mt-4">
         Thank you for visiting my portfolio. Let&apos;s collaborate and create
-        <br />
         exceptional software solutions together!
       </blockquote>
-      <p className="sm uppercase mt-8">contact me</p>
+      <p className="sm uppercase mt-4 md:mt-8">contact me</p>
       <div className="flex justify-center items-center gap-4 mt-2">
         <Link
           href={"https://web.facebook.com/profile.php?id=100008846531008"}
@@ -59,7 +58,9 @@ export default function Footer() {
         </Link>
       </div>
       <div className="absolute bottom-1">
-        <p className="text-xs uppercase text-white">Handcrafted by me © 2023</p>
+        <p className="text-[10px] sm:text-xs uppercase text-white">
+          Handcrafted by me © 2023
+        </p>
       </div>
     </div>
   );
