@@ -9,7 +9,7 @@ import { useRef } from "react";
 export default function Education() {
   return (
     <div
-      className="h-screen w-full flex flex-col justify-around items-center bg-white"
+      className="sm:h-screen w-full flex flex-col justify-around items-center bg-white"
       id="education"
     >
       <div className="flex flex-col justify-center items-center gap-2 mt-12 sm:mt-24">

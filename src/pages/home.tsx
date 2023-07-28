@@ -7,7 +7,7 @@ export default function Home() {
       className="h-screen w-full flex flex-col md:flex-row justify-end pb-10 md:pb-0 md:justify-between items-center bg-white  "
       id="home"
     >
-      <div className="w-full z-10">
+      <div className="z-10">
         <div>
           <motion.div
             initial={{ x: "-1000px" }}
