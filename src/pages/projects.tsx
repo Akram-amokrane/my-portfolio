@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 
 import data from "../data/projects.json";
 import { useEffect } from "react";
+import Slider from "@/components/Slider";
 
 export default function Projects() {
   return (
@@ -15,33 +16,23 @@ export default function Projects() {
       className="bg-primary-300 snap-always snap-center h-screen w-full flex flex-col justify-start items-center bg-white"
       id="projects"
     >
-      <div className="D2 uppercase mt-24">Projects</div>
-      <div className="w-full h-full flex justify-center items-center mt-2">
+      <div className="D2 uppercase mt-20">Projects</div>
+      <div className="w-full h-full flex justify-center gap-2 items-center  mt-2 overflow-hidden">
         <Swiper
-          spaceBetween={30}
-          effect={"coverflow"}
-          navigation={{ enabled: true }}
-          grabCursor={true}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          slidesPerView={3}
+          spaceBetween={5}
+          navigation
+          loop
+          effect="coverflow"
+          coverflowEffect={{ slideShadows: false }}
+          modules={[EffectCoverflow, Navigation]}
           className="mySwiper"
         >
           {data.map((p, i) => (
-            <SwiperSlide
-              key={i}
-              style={{ width: 300 + "px", height: 400 + "px" }}
-            >
-              <Project {...p}></Project>
+            <SwiperSlide key={i}>
+              <div className="w-80 h-96">
+                <Project {...p}></Project>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

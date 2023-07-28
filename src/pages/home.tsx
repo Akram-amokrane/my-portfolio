@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <div
-      className="snap-always snap-center h-screen w-full flex justify-between items-center bg-white "
+      className="h-screen w-full flex flex-col md:flex-row justify-end pb-10 md:pb-0 md:justify-between items-center bg-white  "
       id="home"
     >
       <div className="z-10">
@@ -44,7 +44,7 @@ export default function Home() {
         initial={{ x: "+1000px" }}
         animate={{ x: "0px" }}
         transition={{ type: "tween", ease: "easeInOut", duration: 1 }}
-        className="w-[600px] h-[600px] absolute right-0"
+        className="w-[600px] h-[600px] absolute top-6 md:right-0"
       >
         <Image
           src={"/images/me-draw-f.png"}

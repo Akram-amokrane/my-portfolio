@@ -11,8 +11,8 @@ import { useEffect } from "react";
 export default function Main() {
   return (
     <>
-      <div className="container mx-auto h-auto px-32 overflow-auto flex flex-col justify-center ">
-        <NavBar></NavBar>
+      <NavBar></NavBar>
+      <div className="container mx-auto h-auto px-2 sm:px-0 lg:px-32 overflow-auto flex flex-col justify-center  bg-white">
         <Home></Home>
         <AboutMe></AboutMe>
         <Education></Education>

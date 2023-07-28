@@ -9,17 +9,17 @@ import { useRef } from "react";
 export default function Education() {
   return (
     <div
-      className="bg-primary-300 snap-always snap-center h-screen w-full flex flex-col justify-start items-center bg-white"
+      className="bg-primary-300  h-screen w-full flex flex-col justify-start items-center bg-white"
       id="education"
     >
-      <div className="flex flex-col justify-center items-center  mt-24">
-        <div className="D2 uppercase">Education</div>
-        <div className="w-full h-full px-8 flex justify-between gap-2 items-center mt-6">
+      <div className="flex flex-col justify-center items-center gap-2 mt-24">
+        <div className="D2 uppercase py-4 sm:py-2">Education</div>
+        <div className="w-full h-full md:px-8 md:py-2 py-4 flex justify-between gap-1 items-center sm:mt-4 ">
           {data.degrees.map((deg, i) => (
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ delay: i * 0.4 }}
+              transition={{ delay: i * 0.2 }}
               key={i}
             >
               <EduDegree
@@ -35,17 +35,17 @@ export default function Education() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.7 }}
           className="D2 uppercase"
         >
           Skills
         </motion.div>
-        <div className="w-full h-full px-8 flex justify-between flex-wrap gap-2 items-center mt-6">
+        <div className="w-full h-full px-1 sm:px-8 flex justify-between flex-wrap gap-1 items-center mt-6">
           {data.skills.map((s, i) => (
             <motion.div
               initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              transition={{ delay: 1.1 + i * 0.1 }}
+              whileInView={{ scale: [1, 1.1, 1] }}
+              transition={{ delay: 0.8 + i * 0.1 }}
               key={i}
             >
               <Skill name={s}></Skill>

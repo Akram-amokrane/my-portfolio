@@ -64,5 +64,137 @@
       { "type": "mac", "name": "epb-emb" }
     ],
     "bg": "primary"
+  },
+  {
+    "id": 1,
+    "title": "EPB",
+    "type": "Desktop Application / business intelligence",
+    "description": [
+      "The desktop application I created for EPB (Entreprise Portuaire de Bejaia) is a powerful and efficient solution to address their manual database upgrading challenges. Prior to the implementation of this application, the process of updating their database according to containers' landing, embarking, and ship entering and sorting was labor-intensive and time-consuming.",
+      "With this application, EPB now has a user-friendly interface that simplifies the entire process. The key feature of the application is the ability to upload an Excel file containing all the relevant data. This data includes crucial information about containers, ships, and their respective arrivals and departures.",
+      "Upon uploading the Excel file, the application intelligently processes the data and automatically updates the database. This automation significantly reduces human errors and manual effort, ensuring data accuracy and consistency."
+    ],
+    "features": [
+      "Authentication: the use should be authorized by administrator to log in to the application",
+      "User-friendly Interface: An intuitive and easy-to-navigate interface for seamless user experience.",
+      "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
+    ],
+    "techs": ["JavaFx", "MySql"],
+    "imgs": [
+      { "type": "mac", "name": "epb-login" },
+      { "type": "mac", "name": "epb-emb" }
+    ],
+    "bg": "primary"
+  },
+  {
+    "id": 2,
+    "title": "Chomerce",
+    "type": "Web Application / e-commerce",
+    "description": [
+      "Chomerce is a comprehensive web application designed for e-commerce purposes, built to facilitate a seamless online shopping experience. The application encompasses various features to cater to both clients and administrators, offering a user-friendly interface and efficient management capabilities"
+    ],
+    "features": [
+      "Authentication: Clients can securely register and log in to their accounts, ensuring a personalized shopping experience.",
+      "Product Search and Purchase: The application allows clients to easily search for products based on various criteria, view detailed product information, and add items to their shopping carts. A streamlined checkout process enables smooth and secure transactions.",
+      "User Management: The platform includes an admin panel to manage both client users and fellow administrators, providing full control over user access and permissions.",
+      "Product Management: Admins can effortlessly add new products, categorize them for better organization, and update existing product information.",
+      "Order Processing: Chomerce assists admins in efficiently handling incoming orders, tracking their status, and managing the fulfillment process.",
+      "Dashboard: A comprehensive dashboard gives admins valuable insights into sales analytics, order statistics, and other performance metrics, aiding in decision-making and business growth."
+    ],
+    "techs": ["Angular", "NodeJs", "Express", "MongoDb"],
+    "imgs": [
+      { "type": "mac", "name": "chomerce-home" },
+      { "type": "mac", "name": "chomerce-cart" },
+      { "type": "mac", "name": "chomerce-account" },
+      { "type": "mac", "name": "chomerce-admin" }
+    ],
+    "bg": "accent"
+  },
+  {
+    "id": 3,
+    "title": "EPB",
+    "type": "Desktop Application / business intelligence",
+    "description": [
+      "The desktop application I created for EPB (Entreprise Portuaire de Bejaia) is a powerful and efficient solution to address their manual database upgrading challenges. Prior to the implementation of this application, the process of updating their database according to containers' landing, embarking, and ship entering and sorting was labor-intensive and time-consuming.",
+      "With this application, EPB now has a user-friendly interface that simplifies the entire process. The key feature of the application is the ability to upload an Excel file containing all the relevant data. This data includes crucial information about containers, ships, and their respective arrivals and departures.",
+      "Upon uploading the Excel file, the application intelligently processes the data and automatically updates the database. This automation significantly reduces human errors and manual effort, ensuring data accuracy and consistency."
+    ],
+    "features": [
+      "Authentication: the use should be authorized by administrator to log in to the application",
+      "User-friendly Interface: An intuitive and easy-to-navigate interface for seamless user experience.",
+      "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
+    ],
+    "techs": ["JavaFx", "MySql"],
+    "imgs": [
+      { "type": "mac", "name": "epb-login" },
+      { "type": "mac", "name": "epb-emb" }
+    ],
+    "bg": "primary"
+  },
+  {
+    "id": 1,
+    "title": "EPB",
+    "type": "Desktop Application / business intelligence",
+    "description": [
+      "The desktop application I created for EPB (Entreprise Portuaire de Bejaia) is a powerful and efficient solution to address their manual database upgrading challenges. Prior to the implementation of this application, the process of updating their database according to containers' landing, embarking, and ship entering and sorting was labor-intensive and time-consuming.",
+      "With this application, EPB now has a user-friendly interface that simplifies the entire process. The key feature of the application is the ability to upload an Excel file containing all the relevant data. This data includes crucial information about containers, ships, and their respective arrivals and departures.",
+      "Upon uploading the Excel file, the application intelligently processes the data and automatically updates the database. This automation significantly reduces human errors and manual effort, ensuring data accuracy and consistency."
+    ],
+    "features": [
+      "Authentication: the use should be authorized by administrator to log in to the application",
+      "User-friendly Interface: An intuitive and easy-to-navigate interface for seamless user experience.",
+      "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
+    ],
+    "techs": ["JavaFx", "MySql"],
+    "imgs": [
+      { "type": "mac", "name": "epb-login" },
+      { "type": "mac", "name": "epb-emb" }
+    ],
+    "bg": "primary"
+  },
+  {
+    "id": 2,
+    "title": "Chomerce",
+    "type": "Web Application / e-commerce",
+    "description": [
+      "Chomerce is a comprehensive web application designed for e-commerce purposes, built to facilitate a seamless online shopping experience. The application encompasses various features to cater to both clients and administrators, offering a user-friendly interface and efficient management capabilities"
+    ],
+    "features": [
+      "Authentication: Clients can securely register and log in to their accounts, ensuring a personalized shopping experience.",
+      "Product Search and Purchase: The application allows clients to easily search for products based on various criteria, view detailed product information, and add items to their shopping carts. A streamlined checkout process enables smooth and secure transactions.",
+      "User Management: The platform includes an admin panel to manage both client users and fellow administrators, providing full control over user access and permissions.",
+      "Product Management: Admins can effortlessly add new products, categorize them for better organization, and update existing product information.",
+      "Order Processing: Chomerce assists admins in efficiently handling incoming orders, tracking their status, and managing the fulfillment process.",
+      "Dashboard: A comprehensive dashboard gives admins valuable insights into sales analytics, order statistics, and other performance metrics, aiding in decision-making and business growth."
+    ],
+    "techs": ["Angular", "NodeJs", "Express", "MongoDb"],
+    "imgs": [
+      { "type": "mac", "name": "chomerce-home" },
+      { "type": "mac", "name": "chomerce-cart" },
+      { "type": "mac", "name": "chomerce-account" },
+      { "type": "mac", "name": "chomerce-admin" }
+    ],
+    "bg": "accent"
+  },
+  {
+    "id": 3,
+    "title": "EPB",
+    "type": "Desktop Application / business intelligence",
+    "description": [
+      "The desktop application I created for EPB (Entreprise Portuaire de Bejaia) is a powerful and efficient solution to address their manual database upgrading challenges. Prior to the implementation of this application, the process of updating their database according to containers' landing, embarking, and ship entering and sorting was labor-intensive and time-consuming.",
+      "With this application, EPB now has a user-friendly interface that simplifies the entire process. The key feature of the application is the ability to upload an Excel file containing all the relevant data. This data includes crucial information about containers, ships, and their respective arrivals and departures.",
+      "Upon uploading the Excel file, the application intelligently processes the data and automatically updates the database. This automation significantly reduces human errors and manual effort, ensuring data accuracy and consistency."
+    ],
+    "features": [
+      "Authentication: the use should be authorized by administrator to log in to the application",
+      "User-friendly Interface: An intuitive and easy-to-navigate interface for seamless user experience.",
+      "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
+    ],
+    "techs": ["JavaFx", "MySql"],
+    "imgs": [
+      { "type": "mac", "name": "epb-login" },
+      { "type": "mac", "name": "epb-emb" }
+    ],
+    "bg": "primary"
   }
 ]

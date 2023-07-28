@@ -10,12 +10,12 @@ export default function AboutMe() {
       id="about-me"
     >
       <div className="D2 uppercase mt-24">About Me</div>
-      <div className="w-full h-full px-8 flex justify-between items-center">
+      <div className="w-full h-full px-8 flex flex-col md:flex-row justify-between items-center">
         <motion.div
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ type: "tween", ease: "easeIn", duration: 0.3 }}
-          className="w-2/5 h-5/6 relative rounded-xl overflow-hidden"
+          className="w-3/4 h-3/4 md:w-2/5 md:h-5/6 mt-4 md:mt-0 relative rounded-xl overflow-hidden"
         >
           <Image
             src={"/images/me.jpg"}
@@ -23,14 +23,14 @@ export default function AboutMe() {
             fill={true}
           ></Image>
         </motion.div>
-        <div className="w-3/5 h-full ml-2 flex flex-col items-start justify-center">
+        <div className="w-full md:w-3/5 h-full mt-2 md:ml-2 flex flex-col items-start justify-center">
           {data.map((text, i) => (
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.2, delay: i * 0.3 }}
               key={i}
-              className="sm indent-8 text-justify my-1"
+              className="text-xs md:sm indent-8 text-justify py-1 "
             >
               {text}
             </motion.p>
