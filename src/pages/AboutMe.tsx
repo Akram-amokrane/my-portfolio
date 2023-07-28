@@ -9,7 +9,7 @@ export default function AboutMe() {
       className="bg-primary-300 snap-always snap-center h-screen w-full flex flex-col justify-between items-center bg-white"
       id="about-me"
     >
-      <div className="D2 uppercase mt-24">About Me</div>
+      <div className="D2 uppercase mt-16 sm:mt-24">About Me</div>
       <div className="w-full h-full px-2 sm:px-8 flex flex-col md:flex-row justify-center sm:justify-between items-center">
         <motion.div
           initial={{ scale: 0 }}

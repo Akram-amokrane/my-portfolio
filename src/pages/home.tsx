@@ -13,7 +13,7 @@ export default function Home() {
             initial={{ x: "-1000px" }}
             animate={{ x: "0px" }}
             transition={{ type: "tween" }}
-            className="D2 sm:D1 font-semibold whitespace-nowrap"
+            className="text-3xl sm:D1 font-semibold whitespace-nowrap"
           >
             HEY, I AM
           </motion.div>
@@ -21,7 +21,7 @@ export default function Home() {
             initial={{ x: "-1000px" }}
             animate={{ x: "0px" }}
             transition={{ type: "tween", delay: 0.4 }}
-            className="D2 sm:D1 font-semibold text-primary-500 whitespace-nowrap"
+            className="text-3xl sm:D1 font-semibold text-primary-500 whitespace-nowrap"
           >
             AKRAM AMOKRANE
           </motion.div>
@@ -35,7 +35,7 @@ export default function Home() {
             ease: "easeInOut",
             duration: 0.4,
           }}
-          className="text-xl sm:text-2xl text-dark-500 whitespace-nowrap"
+          className="text-sm font-semibold sm:font-normal sm:text-2xl text-dark-500 whitespace-nowrap"
         >
           Software Engineer / Full Stack developer
         </motion.h2>
@@ -44,7 +44,7 @@ export default function Home() {
         initial={{ x: "+1000px" }}
         animate={{ x: "0px" }}
         transition={{ type: "tween", ease: "easeInOut", duration: 1 }}
-        className="w-full h-2/3  sm:w-[600px] sm:h-[600px] absolute top-12 sm:top-6 md:right-0 "
+        className="w-full h-2/3  sm:w-[600px] sm:h-[600px] absolute top-16 sm:top-6 md:right-0 "
       >
         <Image
           src={"/images/me-draw-f.png"}
