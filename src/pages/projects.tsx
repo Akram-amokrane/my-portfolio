@@ -9,10 +9,13 @@ import "swiper/css/pagination";
 
 import data from "../data/projects.json";
 import { useEffect, useState } from "react";
-import Slider from "@/components/Slider";
 
 export default function Projects() {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(500);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   return (
     <div
