@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   HomeIcon,
@@ -47,7 +47,7 @@ export default function NavBar() {
     const element = document.getElementById(element_id);
     element?.scrollIntoView({
       behavior: "smooth",
-      block: "end",
+      block: "center",
       inline: "nearest",
     });
   };

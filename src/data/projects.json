@@ -66,7 +66,7 @@
     "bg": "primary"
   },
   {
-    "id": 1,
+    "id": 4,
     "title": "EPB",
     "type": "Desktop Application / business intelligence",
     "description": [
@@ -87,7 +87,7 @@
     "bg": "primary"
   },
   {
-    "id": 2,
+    "id": 5,
     "title": "Chomerce",
     "type": "Web Application / e-commerce",
     "description": [
@@ -111,7 +111,7 @@
     "bg": "accent"
   },
   {
-    "id": 3,
+    "id": 6,
     "title": "EPB",
     "type": "Desktop Application / business intelligence",
     "description": [
@@ -132,7 +132,7 @@
     "bg": "primary"
   },
   {
-    "id": 1,
+    "id": 7,
     "title": "EPB",
     "type": "Desktop Application / business intelligence",
     "description": [
@@ -153,7 +153,7 @@
     "bg": "primary"
   },
   {
-    "id": 2,
+    "id": 8,
     "title": "Chomerce",
     "type": "Web Application / e-commerce",
     "description": [
@@ -177,7 +177,7 @@
     "bg": "accent"
   },
   {
-    "id": 3,
+    "id": 9,
     "title": "EPB",
     "type": "Desktop Application / business intelligence",
     "description": [

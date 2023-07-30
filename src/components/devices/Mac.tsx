@@ -858,10 +858,6 @@ export default function Mac({ name, size = 0.1 }: IMac) {
             width="1"
             height="1"
           >
-            {/* <use
-              xlinkHref="#image0_26_832"
-              transform="matrix(0.000813802 0 0 0.00130208 -0.0558268 0)"
-            /> */}
             <use
               xlinkHref={`#${name}`}
               transform="matrix(0.000813802 0 0 0.00130208 -0.0558268 0)"
