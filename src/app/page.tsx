@@ -6,7 +6,7 @@ import Education from "@/pages/Education";
 import Footer from "@/pages/footer";
 import Home from "@/pages/home";
 import Projects from "@/pages/projects";
-import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Main() {
   return (
@@ -20,6 +20,7 @@ export default function Main() {
       </div>
       <Footer></Footer>
       <SvgDefs></SvgDefs>
+      <Analytics />
     </>
   );
 }
