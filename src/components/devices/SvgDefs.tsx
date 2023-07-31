@@ -38,6 +38,48 @@ export default function SvgDefs() {
           height="768"
           xlinkHref="/captures/epb/emb.png"
         />
+        <image
+          id="portfolio-home"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/portfolio/home.png"
+        />
+        <image
+          id="portfolio-about"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/portfolio/about-me.png"
+        />
+        <image
+          id="portfolio-education"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/portfolio/education.png"
+        />
+        <image
+          id="portfolio-projects"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/portfolio/projects.png"
+        />
+        <image
+          id="bmt-auth"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/bmt/auth.png"
+        />
+        <image
+          id="bmt-dashboard"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/bmt/dashboard.png"
+        />
+        <image
+          id="bmt-prediction"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/bmt/prediction.png"
+        />
       </defs>
     </svg>
   );

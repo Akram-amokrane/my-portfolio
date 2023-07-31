@@ -94,7 +94,7 @@ export default function ProjectDetails({
           <h3 className="font-semibold text-dark-300 pt-3 pb-1">Features</h3>
           <div>
             {features.map((f, i) => (
-              <p key={i} className="text-xs text-justify">
+              <p key={i} className="text-sm text-justify">
                 - {f}
               </p>
             ))}

@@ -13,7 +13,7 @@ export default function Home() {
             initial={{ x: "-1000px" }}
             animate={{ x: "0px" }}
             transition={{ type: "tween" }}
-            className="text-3xl sm:D1 font-semibold whitespace-nowrap"
+            className="text-2xl sm:D1 font-semibold whitespace-nowrap"
           >
             HEY, I AM
           </motion.div>
@@ -21,7 +21,7 @@ export default function Home() {
             initial={{ x: "-1000px" }}
             animate={{ x: "0px" }}
             transition={{ type: "tween", delay: 0.4 }}
-            className="text-3xl sm:D1 font-semibold text-primary-500 whitespace-nowrap"
+            className="text-2xl sm:D1 font-semibold text-primary-500 whitespace-nowrap"
           >
             AKRAM AMOKRANE
           </motion.div>
