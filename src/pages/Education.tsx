@@ -20,6 +20,7 @@ export default function Education() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: i * 0.2 }}
+              viewport={{once:true}}
               key={i}
             >
               <EduDegree
@@ -36,6 +37,7 @@ export default function Education() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
+          viewport={{once:true}}
           className="D2 uppercase"
         >
           Skills
@@ -46,6 +48,7 @@ export default function Education() {
               initial={{ scale: 0 }}
               whileInView={{ scale: [1, 1.1, 1] }}
               transition={{ delay: 0.8 + i * 0.1 }}
+              viewport={{once:true}}
               key={i}
             >
               <Skill name={s}></Skill>

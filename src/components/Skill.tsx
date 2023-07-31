@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import {motion} from "framer-motion"
 interface ISkill {
   name: string;
 }
@@ -14,7 +14,7 @@ export default function Skill({ name }: ISkill) {
           fill={true}
         ></Image>
       </div>
-      <h3 className="ml-1 sm:ml-2 text-[10px] sm:text-xs md:text-xl">{name}</h3>
+      <h3 className=" ml-1 sm:ml-2 text-[10px] sm:text-xs md:text-xl">{name}</h3>
     </div>
   );
 }

@@ -21,6 +21,7 @@
     "Typescript",
     "Angular",
     "React",
+    "NextJs",
     "NodeJs",
     "Express",
     "Ionic",
@@ -31,10 +32,12 @@
     "Python",
     "Flask",
     "TensorFlow",
+    "Keras",
     "JavaFx",
     "Firebase",
     "MySql",
     "MongoDb",
+    "TailWind",
     "Figma"
   ]
 }

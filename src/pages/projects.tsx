@@ -1,9 +1,8 @@
 "use client";
 
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 
 import { useEffect, useState } from "react";
 
@@ -61,10 +60,14 @@ export default function Projects() {
           spaceBetween={5}
           navigation={width > 768}
           pagination={width < 768}
+          centeredSlides
           loop
           effect="coverflow"
-          coverflowEffect={{ slideShadows: false }}
-          modules={[EffectCoverflow, width > 767 ? Navigation : Pagination]}
+          coverflowEffect={{
+            slideShadows: false,
+            scale:0.9
+          }}
+          modules={[EffectCoverflow,Pagination]}
           className="mySwiper"
         >
           {data.map((p, i) => (
@@ -81,7 +84,7 @@ export default function Projects() {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.3 }}
+            transition={{ delay: 0.4, duration: 0.1 }}
             className="w-screen md:w-5/6 h-screen md:h-5/6  drop-shadow-2xl z-10"
           >
             <ProjectDetails
@@ -91,8 +94,9 @@ export default function Projects() {
           </motion.div>
           <motion.div
             animate={{ width: "100%", height: "100%" }}
-            transition={{ delay: 0.7, duration: 0.3 }}
+            transition={{ delay: 0.8, duration: 0.3 }}
             className="absolute w-1 h-1 bg-[#00000030] z-0"
+            onClick={() => setShowDetails(false)}
           ></motion.div>
         </motion.div>
       )}
