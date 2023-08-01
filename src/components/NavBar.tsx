@@ -53,7 +53,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="container fixed bg-white z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between items-center w-full  md:w-4/5 lg:w-3/4 h-fit  px-3 py-2 rounded-b-xl sm:rounded-2xl shadow-md shadow-dark-100 ">
+    <nav className="container fixed bg-white z-50 top-0 md:top-4 left-1/2 -translate-x-1/2 flex justify-between items-center w-full  md:w-4/5 lg:w-3/4 h-fit  px-3 py-2 rounded-b-xl sm:rounded-2xl drop-shadow-md shadow-dark-200 ">
       <div className="relative w-12 h-8 sm:w-16 sm:h-12">
         <Image src="/images/logo.svg" alt="my logo" fill={true} />
       </div>
