@@ -3,28 +3,46 @@ export default function SvgDefs() {
     <svg width="0" height="0" viewBox="0 0 3316 1942">
       <defs>
         <image
-          id="chomerce-account"
+          id="chomerce-profile"
           width="1366"
           height="768"
-          xlinkHref="/captures/chomerce/account.jpeg"
+          xlinkHref="/captures/chomerce/profile.png"
         />
         <image
           id="chomerce-home"
           width="1366"
           height="768"
-          xlinkHref="/captures/chomerce/home.jpeg"
+          xlinkHref="/captures/chomerce/home.png"
         />
         <image
           id="chomerce-cart"
           width="1366"
           height="768"
-          xlinkHref="/captures/chomerce/cart.jpeg"
+          xlinkHref="/captures/chomerce/cart.png"
         />
         <image
-          id="chomerce-admin"
+          id="chomerce-catadmin"
           width="1366"
           height="768"
-          xlinkHref="/captures/chomerce/admin.jpeg"
+          xlinkHref="/captures/chomerce/cat-admin.png"
+        />
+        <image
+          id="chomerce-ordadmin"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/chomerce/orders-admin.png"
+        />
+        <image
+          id="chomerce-prodadmin"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/chomerce/products-admin.png"
+        />
+        <image
+          id="chomerce-proddetails"
+          width="1366"
+          height="768"
+          xlinkHref="/captures/chomerce/productDetails.png"
         />
         <image
           id="epb-login"

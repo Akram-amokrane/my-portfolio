@@ -1,8 +1,9 @@
 "use client";
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+import "swiper/css/bundle";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import { useEffect, useState } from "react";
 
@@ -49,35 +50,38 @@ export default function Projects() {
       className="snap-always snap-center h-screen w-full flex flex-col justify-start items-center bg-white mb-2s"
       id="projects"
     >
-      <div className="D2 uppercase mt-20">Projects</div>
+      <div className="D2 uppercase mt-28">Projects</div>
       <div className="w-80 md:w-2/3 sm text-center py-2 text-dark-400">
         Explore a collection of my diverse web projects, showcasing creativity
         and technical excellence.
       </div>
-      <div className="w-full h-full flex justify-center gap-2 items-center  mt-2 overflow-hidden ">
-        <Swiper
-          slidesPerView={width > 768 ? 3 : 1}
-          spaceBetween={5}
-          navigation={width > 768}
-          pagination={width < 768}
-          centeredSlides
-          loop
-          effect="coverflow"
-          coverflowEffect={{
-            slideShadows: false,
-            scale:0.9
-          }}
-          modules={[EffectCoverflow,Pagination]}
-          className="mySwiper"
-        >
-          {data.map((p, i) => (
-            <SwiperSlide key={p.id}>
-              <div className=" h-96" onClick={() => setProjectToShow(p)}>
-                <Project {...p}></Project>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <div className="w-full h-full   mt-8 overflow-hidden ">
+        {data.length > 0 && (
+          <Swiper
+            slidesPerView={width > 768 ? 3 : 1}
+            // spaceBetween={5}
+            navigation={width > 768}
+            pagination={{ enabled: width < 768, clickable: true }}
+            centeredSlides
+            slidesPerGroup={1}
+            loop={true}
+            effect="coverflow"
+            coverflowEffect={{
+              slideShadows: false,
+              scale: 0.9,
+            }}
+            modules={[EffectCoverflow, Navigation, Pagination]}
+            className="mySwiper"
+          >
+            {data.map((p, i) => (
+              <SwiperSlide key={p.id}>
+                <div className=" h-96" onClick={() => setProjectToShow(p)}>
+                  <Project {...p}></Project>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </div>
       {showDetails && (
         <motion.div className="w-full h-full fixed top-0 left-0 flex justify-center items-center z-50   ">
