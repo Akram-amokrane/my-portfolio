@@ -47,15 +47,15 @@ export default function Projects() {
 
   return (
     <div
-      className="snap-always snap-center h-screen w-full flex flex-col justify-start items-center bg-white mb-2s"
+      className="h-auto md:h-screen w-full flex flex-col justify-start items-center bg-white mb-2"
       id="projects"
     >
       <div className="D2 uppercase mt-28">Projects</div>
-      <div className="w-80 md:w-2/3 sm text-center py-2 text-dark-400">
+      <div className="w-72 sm:w-96 md:w-1/3  sm text-center py-2 text-dark-400">
         Explore a collection of my diverse web projects, showcasing creativity
         and technical excellence.
       </div>
-      <div className="w-full h-full   mt-8 overflow-hidden ">
+      <div className="w-full h-full   mt-4 overflow-hidden ">
         {data.length > 0 && (
           <Swiper
             slidesPerView={width > 768 ? 3 : 1}
@@ -75,7 +75,10 @@ export default function Projects() {
           >
             {data.map((p, i) => (
               <SwiperSlide key={p.id}>
-                <div className=" h-96" onClick={() => setProjectToShow(p)}>
+                <div
+                  className="h-80 md:h-96"
+                  onClick={() => setProjectToShow(p)}
+                >
                   <Project {...p}></Project>
                 </div>
               </SwiperSlide>
