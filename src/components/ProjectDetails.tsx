@@ -41,14 +41,14 @@ export default function ProjectDetails({
       </div>
       <motion.div className="w-full sm:w-2/5 h-2/5 sm:h-full flex flex-col items-center justify-center p-2  bg-[#ADB5BD]">
         <div
-          className="w-full h-1/2 "
+          className="w-full h-5/6 sm:h-1/2 "
           style={{
             backgroundImage: `url(${selectedImg})`,
             backgroundSize: "cover",
             backgroundPosition: "center center",
           }}
         ></div>
-        <div className="flex justify-center items-center gap-1 flex-wrap ">
+        <div className="w-full flex justify-center items-center gap-1 flex-nowrap sm:flex-wrap overflow-x-auto">
           {imgs.map((img, i) => (
             <div
               className="w-24 h-16 cursor-pointer"
