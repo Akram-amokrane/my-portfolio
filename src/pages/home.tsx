@@ -44,7 +44,7 @@ export default function Home() {
         initial={{ x: "+1000px" }}
         animate={{ x: "0px" }}
         transition={{ type: "tween", ease: "easeInOut", duration: 1 }}
-        className="w-full h-2/3  sm:w-[600px] sm:h-[600px] absolute top-16 sm:top-6 md:right-0 "
+        className="w-full h-2/3  sm:w-[600px] sm:h-[600px] absolute top-16 sm:top-12 md:right-0 "
       >
         <Image
           src={"/images/me-draw-f.png"}
