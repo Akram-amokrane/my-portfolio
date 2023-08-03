@@ -1,7 +1,5 @@
-import Mac from "./devices/Mac";
 import Skill from "./Skill";
 import { useEffect, useState } from "react";
-import Head from "next/head";
 import { motion } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -11,7 +9,7 @@ interface IProject {
   description: Array<string>;
   features: Array<string>;
   techs: Array<string>;
-  imgs: Array<{ type: string; name: string }>;
+  imgs: Array<string>;
   bg: string;
   onClose: () => void;
 }
@@ -41,38 +39,27 @@ export default function ProjectDetails({
           onClick={onClose}
         />
       </div>
-      <motion.div className="w-full sm:w-2/5 h-2/5 sm:h-full flex flex-col items-center justify-center p-2  bg-dark-300">
-        <div>
-          <Mac
-            name={selectedImg.name}
-            size={width < 640 ? 0.08 : width / 10000}
-          ></Mac>
-        </div>
+      <motion.div className="w-full sm:w-2/5 h-2/5 sm:h-full flex flex-col items-center justify-center p-2  bg-[#ADB5BD]">
+        <div
+          className="w-full h-1/2 "
+          style={{
+            backgroundImage: `url(${selectedImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+          }}
+        ></div>
         <div className="flex justify-center items-center gap-1 flex-wrap ">
           {imgs.map((img, i) => (
-            <svg
-              key={img.name}
-              width={60}
-              height={60}
-              viewBox="0 0 2560 1600"
-              onClick={() => setSelectedImg(img)}
-              className="cursor-pointer"
-            >
-              <rect width="2560" height="1600" fill={`url(#${img.name}${i})`} />
-              <defs>
-                <pattern
-                  id={`${img.name}${i}`}
-                  patternContentUnits="objectBoundingBox"
-                  width="1"
-                  height="1"
-                >
-                  <use
-                    xlinkHref={`#${img.name}`}
-                    transform="matrix(0.000813802 0 0 0.00130208 -0.0558268 0)"
-                  />
-                </pattern>
-              </defs>
-            </svg>
+            <div
+              className="w-24 h-16 cursor-pointer"
+              key={i}
+              style={{
+                backgroundImage: `url(${imgs[i]})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center center",
+              }}
+              onClick={() => setSelectedImg(imgs[i])}
+            ></div>
           ))}
         </div>
       </motion.div>

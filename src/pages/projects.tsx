@@ -12,7 +12,7 @@ import ProjectDetails from "@/components/ProjectDetails";
 
 import data from "../data/projects.json";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Navigation, EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -23,7 +23,7 @@ interface IProjectDetails {
   description: Array<string>;
   features: Array<string>;
   techs: Array<string>;
-  imgs: Array<{ type: string; name: string }>;
+  imgs: Array<string>;
   bg: string;
 }
 
@@ -88,7 +88,7 @@ export default function Projects() {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.1 }}
+            transition={{ delay: 0.1, duration: 0.3 }}
             className="w-screen md:w-5/6 h-screen md:h-5/6  drop-shadow-2xl z-10"
           >
             <ProjectDetails
@@ -98,7 +98,7 @@ export default function Projects() {
           </motion.div>
           <motion.div
             animate={{ width: "100%", height: "100%" }}
-            transition={{ delay: 0.8, duration: 0.3 }}
+            transition={{ delay: 0.5, duration: 0.3 }}
             className="absolute w-1 h-1 bg-[#00000030] z-0"
             onClick={() => setShowDetails(false)}
           ></motion.div>

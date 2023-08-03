@@ -49,7 +49,8 @@ export default function Home() {
         <Image
           src={"/images/me-draw-f.png"}
           alt="me drawed"
-          fill={true}
+          width={600}
+          height={600}
         ></Image>
       </motion.div>
     </div>

@@ -1,15 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ReactNode, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   HomeIcon,
   IdentificationIcon,
   AcademicCapIcon,
   BriefcaseIcon,
-  EnvelopeIcon,
   ChatBubbleLeftIcon,
 } from "@heroicons/react/24/outline";
 

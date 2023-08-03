@@ -14,10 +14,7 @@
       "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
     ],
     "techs": ["JavaFx", "MySql"],
-    "imgs": [
-      { "type": "mac", "name": "epb-login" },
-      { "type": "mac", "name": "epb-emb" }
-    ],
+    "imgs": ["/captures/epb/login.png", "/captures/epb/emb.png"],
     "bg": "primary"
   },
   {
@@ -37,13 +34,13 @@
     ],
     "techs": ["Angular", "NodeJs", "Express", "MongoDb"],
     "imgs": [
-      { "type": "mac", "name": "chomerce-home" },
-      { "type": "mac", "name": "chomerce-proddetails" },
-      { "type": "mac", "name": "chomerce-cart" },
-      { "type": "mac", "name": "chomerce-profile" },
-      { "type": "mac", "name": "chomerce-prodadmin" },
-      { "type": "mac", "name": "chomerce-ordadmin" },
-      { "type": "mac", "name": "chomerce-catadmin" }
+      "/captures/chomerce/home.png",
+      "/captures/chomerce/cart.png",
+      "/captures/chomerce/productDetails.png",
+      "/captures/chomerce/profile.png",
+      "/captures/chomerce/products-admin.png",
+      "/captures/chomerce/orders-admin.png",
+      "/captures/chomerce/cat-admin.png"
     ],
     "bg": "accent"
   },
@@ -63,10 +60,10 @@
     ],
     "techs": ["NextJs", "Typescript", "Figma"],
     "imgs": [
-      { "type": "mac", "name": "portfolio-home" },
-      { "type": "mac", "name": "portfolio-about" },
-      { "type": "mac", "name": "portfolio-education" },
-      { "type": "mac", "name": "portfolio-projects" }
+      "/captures/portfolio/home.png",
+      "/captures/portfolio/about-me.png",
+      "/captures/portfolio/education.png",
+      "/captures/portfolio/projects.png"
     ],
     "bg": "primary"
   },
@@ -88,104 +85,9 @@
     ],
     "techs": ["Angular", "Typescript", "NodeJs", "Express", "Figma"],
     "imgs": [
-      { "type": "mac", "name": "bmt-auth" },
-      { "type": "mac", "name": "bmt-dashboard" },
-      { "type": "mac", "name": "bmt-prediction" }
-    ],
-    "bg": "primary"
-  },
-  {
-    "id": 1,
-    "title": "EPB",
-    "type": "Desktop Application / Management",
-    "description": [
-      "The desktop application I created for EPB (Entreprise Portuaire de Bejaia) is a powerful and efficient solution to address their manual database upgrading challenges. Prior to the implementation of this application, the process of updating their database according to containers' landing, embarking, and ship entering and sorting was labor-intensive and time-consuming.",
-      "With this application, EPB now has a user-friendly interface that simplifies the entire process. The key feature of the application is the ability to upload an Excel file containing all the relevant data. This data includes crucial information about containers, ships, and their respective arrivals and departures.",
-      "Upon uploading the Excel file, the application intelligently processes the data and automatically updates the database. This automation significantly reduces human errors and manual effort, ensuring data accuracy and consistency."
-    ],
-    "features": [
-      "Authentication: the use should be authorized by administrator to log in to the application",
-      "User-friendly Interface: An intuitive and easy-to-navigate interface for seamless user experience.",
-      "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
-    ],
-    "techs": ["JavaFx", "MySql"],
-    "imgs": [
-      { "type": "mac", "name": "epb-login" },
-      { "type": "mac", "name": "epb-emb" }
-    ],
-    "bg": "primary"
-  },
-  {
-    "id": 2,
-    "title": "Chomerce",
-    "type": "Web Application / e-commerce",
-    "description": [
-      "Chomerce is a comprehensive web application designed for e-commerce purposes, built to facilitate a seamless online shopping experience. The application encompasses various features to cater to both clients and administrators, offering a user-friendly interface and efficient management capabilities"
-    ],
-    "features": [
-      "Authentication: Clients can securely register and log in to their accounts, ensuring a personalized shopping experience.",
-      "Product Search and Purchase: The application allows clients to easily search for products based on various criteria, view detailed product information, and add items to their shopping carts. A streamlined checkout process enables smooth and secure transactions.",
-      "User Management: The platform includes an admin panel to manage both client users and fellow administrators, providing full control over user access and permissions.",
-      "Product Management: Admins can effortlessly add new products, categorize them for better organization, and update existing product information.",
-      "Order Processing: Chomerce assists admins in efficiently handling incoming orders, tracking their status, and managing the fulfillment process.",
-      "Dashboard: A comprehensive dashboard gives admins valuable insights into sales analytics, order statistics, and other performance metrics, aiding in decision-making and business growth."
-    ],
-    "techs": ["Angular", "NodeJs", "Express", "MongoDb"],
-    "imgs": [
-      { "type": "mac", "name": "chomerce-home" },
-      { "type": "mac", "name": "chomerce-proddetails" },
-      { "type": "mac", "name": "chomerce-cart" },
-      { "type": "mac", "name": "chomerce-profile" },
-      { "type": "mac", "name": "chomerce-prodadmin" },
-      { "type": "mac", "name": "chomerce-ordadmin" },
-      { "type": "mac", "name": "chomerce-catadmin" }
-    ],
-    "bg": "accent"
-  },
-  {
-    "id": 3,
-    "title": "My Portfolio",
-    "type": "Website / Portfolio",
-    "description": [
-      "My portfolio website is a dynamic and visually appealing showcase of my skills, expertise, and accomplishments as a developer. Built using Next.js and TypeScript, the website offers a seamless user experience and showcases various sections designed to engage and inform visitors"
-    ],
-    "features": [
-      "Home Section: Warmly welcomes visitors with a personalized greeting and eye-catching images.",
-      "About Me Section: Introduces myself to visitors, sharing my background, experiences, and passions",
-      "Education Section: Showcases my academic achievements and degrees, emphasizing my commitment to continuous learning and Highlights relevant skills and technologies I have mastered.",
-      "Projects Section: Displays an impressive array of projects that demonstrate my expertise and creativity. Provides detailed information on each project's goals and technologies used",
-      "Footer Section: Offers easy-to-find contact links, allowing visitors to connect with me effortlessly."
-    ],
-    "techs": ["NextJs", "Typescript", "Figma"],
-    "imgs": [
-      { "type": "mac", "name": "portfolio-home" },
-      { "type": "mac", "name": "portfolio-about" },
-      { "type": "mac", "name": "portfolio-education" },
-      { "type": "mac", "name": "portfolio-projects" }
-    ],
-    "bg": "primary"
-  },
-  {
-    "id": 4,
-    "title": "Bejaia Mediterranean Terminal",
-    "type": "Desktop Application / Business Intelligence",
-    "description": [
-      "The BMT Company Dashboard Application is a powerful desktop solution designed to cater specifically to Bejaia Mediterranean Terminal's needs. Leveraging the robust technologies of Angular for frontend, Express.js for backend, and MongoDB as the database, this application offers a comprehensive and user-friendly experience.",
-      "By combining Angular, Express.js, and MongoDB, the BMT Company Dashboard Application offers a highly scalable and efficient solution for managing and analyzing vital company data. With the machine learning-powered prediction model, the application empowers BMT to stay ahead of the curve by making informed decisions based on data-driven insights.",
-      "The application's emphasis on security, ease of use, and dynamic charts enhances BMT's decision-making capabilities, fostering productivity and growth. With this powerful desktop application at their disposal, BMT can achieve operational excellence and maintain a competitive edge in their industry."
-    ],
-    "features": [
-      "User-Friendly Interface: The application boasts a user-friendly interface with intuitive navigation, making it easy for users to access and interpret data quickly.",
-      "Authentication System: A robust authentication system ensures secure access to the application. Normal users can log in to access the dashboard and view company data, including the charts. Admin users enjoy additional privileges, such as model retraining.",
-      "Dashboard with Charts: The charts provide valuable insights for decision-making and tracking key performance indicators.",
-      "Prediction Model Using Machine Learning: The application includes an advanced machine learning-based prediction model that forecasts the company's turnover for the upcoming months. Utilizing historical data and sophisticated algorithms, the model offers accurate predictions, empowering BMT with informed planning and strategic decision-making",
-      "Admin Functionality - Model Retraining: Admin users have the capability to retrain the machine learning model with updated data. This feature allows BMT to ensure the predictive accuracy of the model and adapt to changing business trends effectively."
-    ],
-    "techs": ["Angular", "Typescript", "NodeJs", "Express", "Figma"],
-    "imgs": [
-      { "type": "mac", "name": "bmt-auth" },
-      { "type": "mac", "name": "bmt-dashboard" },
-      { "type": "mac", "name": "bmt-prediction" }
+      "/captures/bmt/auth.png",
+      "/captures/bmt/dashboard.png",
+      "/captures/bmt/prediction.png"
     ],
     "bg": "primary"
   }

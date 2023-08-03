@@ -22,6 +22,7 @@ export default function AboutMe() {
             src={"/images/me.jpg"}
             alt="me in about me"
             fill={true}
+            loading="lazy"
           ></Image>
         </motion.div>
         <div className="w-full h-full sm:h-auto md:w-3/5 h-3/4 mt-2 md:ml-2 overflow-y-auto sm:overflow-hidden flex flex-col items-start justify-center">

@@ -1,6 +1,5 @@
 "use client";
 import NavBar from "@/components/NavBar";
-import SvgDefs from "@/components/devices/SvgDefs";
 import AboutMe from "@/pages/AboutMe";
 import Education from "@/pages/Education";
 import Footer from "@/pages/footer";
@@ -19,7 +18,6 @@ export default function Main() {
         <Projects></Projects>
       </div>
       <Footer></Footer>
-      <SvgDefs></SvgDefs>
       <Analytics />
     </>
   );
