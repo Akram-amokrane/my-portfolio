@@ -14,7 +14,7 @@
       "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
     ],
     "techs": ["JavaFx", "MySql"],
-    "imgs": ["/captures/epb/login.png", "/captures/epb/emb.png"],
+    "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
     "bg": "primary"
   },
   {
@@ -34,13 +34,13 @@
     ],
     "techs": ["Angular", "NodeJs", "Express", "MongoDb"],
     "imgs": [
-      "/captures/chomerce/home.png",
-      "/captures/chomerce/cart.png",
-      "/captures/chomerce/productDetails.png",
-      "/captures/chomerce/profile.png",
-      "/captures/chomerce/products-admin.png",
-      "/captures/chomerce/orders-admin.png",
-      "/captures/chomerce/cat-admin.png"
+      "/captures/chomerce/home.webp",
+      "/captures/chomerce/cart.webp",
+      "/captures/chomerce/productDetails.webp",
+      "/captures/chomerce/profile.webp",
+      "/captures/chomerce/products-admin.webp",
+      "/captures/chomerce/orders-admin.webp",
+      "/captures/chomerce/cat-admin.webp"
     ],
     "bg": "accent"
   },
@@ -60,10 +60,10 @@
     ],
     "techs": ["NextJs", "Typescript", "Figma"],
     "imgs": [
-      "/captures/portfolio/home.png",
-      "/captures/portfolio/about-me.png",
-      "/captures/portfolio/education.png",
-      "/captures/portfolio/projects.png"
+      "/captures/portfolio/home.webp",
+      "/captures/portfolio/about-me.webp",
+      "/captures/portfolio/education.webp",
+      "/captures/portfolio/projects.webp"
     ],
     "bg": "primary"
   },
@@ -85,9 +85,9 @@
     ],
     "techs": ["Angular", "Typescript", "NodeJs", "Express", "Figma"],
     "imgs": [
-      "/captures/bmt/auth.png",
-      "/captures/bmt/dashboard.png",
-      "/captures/bmt/prediction.png"
+      "/captures/bmt/auth.webp",
+      "/captures/bmt/dashboard.webp",
+      "/captures/bmt/prediction.webp"
     ],
     "bg": "primary"
   },
@@ -106,7 +106,7 @@
       "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
     ],
     "techs": ["JavaFx", "MySql"],
-    "imgs": ["/captures/epb/login.png", "/captures/epb/emb.png"],
+    "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
     "bg": "primary"
   },
   {
@@ -126,13 +126,13 @@
     ],
     "techs": ["Angular", "NodeJs", "Express", "MongoDb"],
     "imgs": [
-      "/captures/chomerce/home.png",
-      "/captures/chomerce/cart.png",
-      "/captures/chomerce/productDetails.png",
-      "/captures/chomerce/profile.png",
-      "/captures/chomerce/products-admin.png",
-      "/captures/chomerce/orders-admin.png",
-      "/captures/chomerce/cat-admin.png"
+      "/captures/chomerce/home.webp",
+      "/captures/chomerce/cart.webp",
+      "/captures/chomerce/productDetails.webp",
+      "/captures/chomerce/profile.webp",
+      "/captures/chomerce/products-admin.webp",
+      "/captures/chomerce/orders-admin.webp",
+      "/captures/chomerce/cat-admin.webp"
     ],
     "bg": "accent"
   },
@@ -152,10 +152,10 @@
     ],
     "techs": ["NextJs", "Typescript", "Figma"],
     "imgs": [
-      "/captures/portfolio/home.png",
-      "/captures/portfolio/about-me.png",
-      "/captures/portfolio/education.png",
-      "/captures/portfolio/projects.png"
+      "/captures/portfolio/home.webp",
+      "/captures/portfolio/about-me.webp",
+      "/captures/portfolio/education.webp",
+      "/captures/portfolio/projects.webp"
     ],
     "bg": "primary"
   },
@@ -177,9 +177,9 @@
     ],
     "techs": ["Angular", "Typescript", "NodeJs", "Express", "Figma"],
     "imgs": [
-      "/captures/bmt/auth.png",
-      "/captures/bmt/dashboard.png",
-      "/captures/bmt/prediction.png"
+      "/captures/bmt/auth.webp",
+      "/captures/bmt/dashboard.webp",
+      "/captures/bmt/prediction.webp"
     ],
     "bg": "primary"
   }

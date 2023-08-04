@@ -19,7 +19,7 @@ export default function AboutMe() {
           className=" w-56 h-56 sm:w-60 sm:h-60 md:w-72 md:h-72 mt-4 md:mt-0 relative rounded-xl overflow-hidden"
         >
           <Image
-            src={"/images/me.jpg"}
+            src={"/images/me.webp"}
             alt="me in about me"
             fill={true}
           ></Image>

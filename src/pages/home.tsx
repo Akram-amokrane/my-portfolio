@@ -47,7 +47,7 @@ export default function Home() {
         className="w-full h-2/3  sm:w-[600px] sm:h-[600px] absolute top-16 sm:top-12 md:right-0 "
       >
         <Image
-          src={"/images/me-draw-f.png"}
+          src={"/images/me-draw-f.webp"}
           alt="me drawed"
           width={600}
           height={600}
