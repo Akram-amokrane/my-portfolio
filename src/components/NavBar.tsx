@@ -21,6 +21,12 @@ export default function NavBar() {
       icon: HomeIcon,
     },
     {
+      id: "projects",
+      name: "Projects",
+      default: false,
+      icon: BriefcaseIcon,
+    },
+    {
       id: "about-me",
       name: "About me",
       default: false,
@@ -31,12 +37,6 @@ export default function NavBar() {
       name: "Education",
       default: false,
       icon: AcademicCapIcon,
-    },
-    {
-      id: "projects",
-      name: "Projects",
-      default: false,
-      icon: BriefcaseIcon,
     },
   ];
 

@@ -7,12 +7,12 @@ import data from "../data/Education.json";
 export default function Education() {
   return (
     <div
-      className="sm:h-screen w-full flex flex-col justify-around items-center bg-white"
+      className="sm:h-screen w-screen sm:w-full flex flex-col justify-around items-center bg-white"
       id="education"
     >
-      <div className="flex flex-col justify-center items-center gap-2 mt-12 sm:mt-24">
-        <div className="D2 uppercase py-4 sm:py-2">Education</div>
-        <div className="w-full h-full md:px-8 md:py-2 py-1 sm:py-4 flex flex-col sm:flex-row justify-between gap-1 items-center sm:mt-4 ">
+      <div className="flex flex-col justify-center items-center gap-2 mt-14 sm:mt-24">
+        <div className="D2 uppercase py-1 sm:py-2">Education</div>
+        <div className="w-full h-full md:px-8 md:py-2 py-1  flex flex-col sm:flex-row justify-between gap-1 items-center md:mt-2 ">
           {data.degrees.map((deg, i) => (
             <motion.div
               initial={{ opacity: 0 }}
@@ -40,7 +40,7 @@ export default function Education() {
         >
           Skills
         </motion.div>
-        <div className="w-full h-full px-1 sm:px-8 flex justify-center  flex-wrap gap-1 sm:gap-2 items-center mt-1 sm:mt-6">
+        <div className="w-full h-full px-1 sm:px-4 pb-1 flex justify-center  flex-wrap gap-1 sm:gap-2 items-center mt-1 sm:mt-6">
           {data.skills.map((s, i) => (
             <motion.div
               initial={{ scale: 0 }}

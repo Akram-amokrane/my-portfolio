@@ -68,7 +68,7 @@
   }
 
   blockquote{
-    @apply text-sm font-normal leading-7 
+    @apply text-xs md:text-sm font-normal leading-7 
   }
 
   

@@ -69,7 +69,7 @@
   },
   {
     "id": 4,
-    "title": "Bejaia Mediterranean Terminal",
+    "title": "BMT",
     "type": "Desktop Application / Business Intelligence",
     "description": [
       "The BMT Company Dashboard Application is a powerful desktop solution designed to cater specifically to Bejaia Mediterranean Terminal's needs. Leveraging the robust technologies of Angular for frontend, Express.js for backend, and MongoDB as the database, this application offers a comprehensive and user-friendly experience.",
@@ -161,7 +161,7 @@
   },
   {
     "id": 8,
-    "title": "Bejaia Mediterranean Terminal",
+    "title": "BMT",
     "type": "Desktop Application / Business Intelligence",
     "description": [
       "The BMT Company Dashboard Application is a powerful desktop solution designed to cater specifically to Bejaia Mediterranean Terminal's needs. Leveraging the robust technologies of Angular for frontend, Express.js for backend, and MongoDB as the database, this application offers a comprehensive and user-friendly experience.",

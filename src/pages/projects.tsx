@@ -47,15 +47,15 @@ export default function Projects() {
 
   return (
     <div
-      className="h-auto md:h-screen w-full flex flex-col justify-start items-center bg-white mb-2"
+      className="h-screen md:h-screen w-screen sm:w-full flex flex-col justify-start items-center bg-white "
       id="projects"
     >
-      <div className="D2 uppercase mt-28">Projects</div>
-      <div className="w-72 sm:w-96 md:w-1/3  sm text-center py-2 text-dark-400">
+      <div className="D2 uppercase mt-16 md:mt-24">Projects</div>
+      <div className="w-72 sm:w-96  sm text-center py-2 text-dark-400">
         Explore a collection of my diverse web projects, showcasing creativity
         and technical excellence.
       </div>
-      <div className="w-full h-full   mt-4 overflow-hidden ">
+      <div className="w-[300px] md:w-full h-full   mt-2 overflow-hidden ">
         {data.length > 0 && (
           <Swiper
             slidesPerView={width > 768 ? 3 : 1}

@@ -13,9 +13,9 @@ export default function Main() {
       <NavBar></NavBar>
       <div className="container mx-auto w-full h-auto px-2 sm:px-0 lg:px-32 overflow-y-auto overflow-x-hidden flex flex-col justify-center  bg-white">
         <Home></Home>
+        <Projects></Projects>
         <AboutMe></AboutMe>
         <Education></Education>
-        <Projects></Projects>
       </div>
       <Footer></Footer>
       <Analytics />
