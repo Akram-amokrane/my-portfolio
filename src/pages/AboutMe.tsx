@@ -6,10 +6,10 @@ import data from "../data/about-me.json";
 export default function AboutMe() {
   return (
     <div
-      className="h-screen w-screen sm:w-full flex flex-col justify-center items-center bg-white"
+      className="h-screen w-screen sm:w-full flex flex-col justify-center items-center bg-white overflow-hidden"
       id="about-me"
     >
-      <div className="D2 uppercase mt-16 sm:py-2">About Me</div>
+      <div className="D2 uppercase mt-24 sm:py-2 md:mb-8">About Me</div>
       <div className="w-full h-auto max-h-full px-2 sm:px-8 flex flex-col sm:flex-row justify-center sm:justify-center items-center">
         <motion.div
           initial={{ scale: 0 }}
