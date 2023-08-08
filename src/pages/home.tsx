@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useTheme } from "../app/layout";
+import { useTheme } from "next-themes";
 
 export default function Home() {
   const { theme } = useTheme();

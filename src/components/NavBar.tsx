@@ -12,7 +12,7 @@ import {
   SunIcon,
 } from "@heroicons/react/24/outline";
 
-import { useTheme } from "../app/layout";
+import { useTheme } from "next-themes";
 
 export default function NavBar() {
   const router = useRouter();
