@@ -32,10 +32,10 @@ export default function ProjectDetails({
   }, []);
 
   return (
-    <div className="w-full h-full relative flex flex-col sm:flex-row  justify-start items-center overflow-hidden border-dark-200 border-[1px] border-solid md:rounded-xl ">
+    <div className="w-full h-full relative flex flex-col sm:flex-row  justify-start items-center overflow-hidden border-dark-200 dark:border-dark-800 border-[1px] border-solid md:rounded-xl ">
       <div className="w-6 h-6 absolute top-2 right-2">
         <XMarkIcon
-          className="w-6 h-6 text-dark-400 hover:text-accent-600 cursor-pointer "
+          className="w-6 h-6 text-dark-400 dark:text-dark-100 hover:text-accent-600 cursor-pointer "
           onClick={onClose}
         />
       </div>
@@ -63,31 +63,37 @@ export default function ProjectDetails({
           ))}
         </div>
       </motion.div>
-      <div className="h-3/5 sm:h-full w-full sm:w-3/5 flex items-start p-4 overflow-x-hidden overflow-y-auto bg-white">
+      <div className="h-3/5 sm:h-full w-full sm:w-3/5 flex items-start p-4 overflow-x-hidden overflow-y-auto bg-white dark:bg-dark-400">
         <div>
-          <motion.p className="text-xs text-dark-400">{type}</motion.p>
-          <motion.h1 className="font-semibold">{title}</motion.h1>
+          <motion.p className="text-xs text-dark-400 dark:text-dark-200">
+            {type}
+          </motion.p>
+          <motion.h1 className="font-semibold dark:text-white">
+            {title}
+          </motion.h1>
           <motion.div className="mt-1">
             {description.map((desc, i) => (
               <motion.p
                 key={i}
-                className="text-sm indent-4 text-justify italic"
+                className="text-sm indent-4 text-justify italic dark:text-dark-100"
               >
                 {desc}
               </motion.p>
             ))}
           </motion.div>
 
-          <h3 className="font-semibold text-dark-300 pt-3 pb-1">Features</h3>
+          <h3 className="font-semibold text-dark-300 pt-3 pb-1 dark:text-dark-200">
+            Features
+          </h3>
           <div>
             {features.map((f, i) => (
-              <p key={i} className="text-sm text-justify">
+              <p key={i} className="text-sm text-justify dark:text-dark-100">
                 - {f}
               </p>
             ))}
           </div>
 
-          <h3 className="font-semibold text-dark-300 pt-3 pb-1">
+          <h3 className="font-semibold text-dark-300 pt-3 pb-1 dark:text-dark-200">
             Technologies
           </h3>
           <div className="flex gap-2 flex-wrap">

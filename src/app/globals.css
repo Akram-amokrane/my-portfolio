@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 
+
+
 @layer base{
-
-
   @font-face {
     font-family: "Montserrat";
     font-style: normal;

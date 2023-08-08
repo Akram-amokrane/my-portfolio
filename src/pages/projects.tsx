@@ -47,11 +47,13 @@ export default function Projects() {
 
   return (
     <div
-      className="h-screen md:h-screen w-screen sm:w-full flex flex-col justify-start items-center bg-white "
+      className="h-screen md:h-screen w-screen sm:w-full flex flex-col justify-start items-center bg-white dark:bg-dark-500"
       id="projects"
     >
-      <div className="D2 uppercase mt-16 md:mt-24">Projects</div>
-      <div className="w-72 sm:w-96  sm text-center py-2 text-dark-400">
+      <div className="D2 uppercase mt-16 md:mt-24 dark:text-white">
+        Projects
+      </div>
+      <div className="w-72 sm:w-96  sm text-center py-2 text-dark-400 dark:text-dark-200">
         Explore a collection of my diverse web projects, showcasing creativity
         and technical excellence.
       </div>
@@ -102,7 +104,7 @@ export default function Projects() {
           <motion.div
             animate={{ width: "100%", height: "100%" }}
             transition={{ delay: 0.5, duration: 0.3 }}
-            className="absolute w-1 h-1 bg-[#00000030] z-0"
+            className="absolute w-1 h-1 bg-[#00000030] dark:bg-[#FFFFFF30] z-0"
             onClick={() => setShowDetails(false)}
           ></motion.div>
         </motion.div>

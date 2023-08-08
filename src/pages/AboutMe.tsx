@@ -6,10 +6,12 @@ import data from "../data/about-me.json";
 export default function AboutMe() {
   return (
     <div
-      className="h-screen w-screen sm:w-full flex flex-col justify-center items-center bg-white overflow-hidden"
+      className="h-screen w-screen sm:w-full flex flex-col justify-center items-center bg-white dark:bg-dark-500 overflow-hidden"
       id="about-me"
     >
-      <div className="D2 uppercase mt-24 sm:py-2 md:mb-8">About Me</div>
+      <div className="D2 uppercase mt-24 sm:py-2 md:mb-8 dark:text-white">
+        About Me
+      </div>
       <div className="w-full h-auto max-h-full px-2 sm:px-8 flex flex-col sm:flex-row justify-center sm:justify-center items-center">
         <motion.div
           initial={{ scale: 0 }}
@@ -32,7 +34,7 @@ export default function AboutMe() {
               transition={{ duration: 0.2, delay: i * 0.3 }}
               viewport={{ once: true }}
               key={i}
-              className="text-xs sm:text-sm md:text-base indent-8 text-justify py-1 "
+              className="text-xs sm:text-sm md:text-base indent-8 text-justify py-1 dark:text-dark-200"
             >
               {text}
             </motion.p>
@@ -43,7 +45,7 @@ export default function AboutMe() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.2, delay: 0.9 }}
             viewport={{ once: true }}
-            className="inline-block w-full text-center font-semibold text-primary-500 my-1"
+            className="inline-block w-full text-center font-semibold text-primary-500 dark:text-primary-400 my-1"
           >
             Let&apos;s work together to create exceptional software solutions!
           </motion.blockquote>
