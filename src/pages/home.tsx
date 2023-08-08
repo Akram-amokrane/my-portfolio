@@ -1,9 +1,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export default function Home() {
   const { theme } = useTheme();
+
+  useEffect(() => {
+    console.log(theme);
+  }, [theme]);
 
   return (
     <div

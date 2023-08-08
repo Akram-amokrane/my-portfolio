@@ -8,7 +8,7 @@ export default function MyThemeProvider({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+    <ThemeProvider attribute="class" disableTransitionOnChange  enableSystem={false}>
       {children}
     </ThemeProvider>
   );
