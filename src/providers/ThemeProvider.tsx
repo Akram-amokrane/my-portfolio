@@ -10,7 +10,6 @@ export default function MyThemeProvider({
   return (
     <ThemeProvider
       attribute="class"
-      forcedTheme="light"
       defaultTheme="light"
       disableTransitionOnChange
       enableSystem={false}
