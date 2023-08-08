@@ -8,6 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     console.log(theme);
+    console.log(theme == "dark" ? "-dark" : "");
   }, [theme]);
 
   return (
