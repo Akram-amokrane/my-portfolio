@@ -2,15 +2,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import data from "../data/about-me.json";
+import { useLang } from "@/providers/LangProvider";
 
 export default function AboutMe() {
+  const { lang } = useLang();
   return (
     <div
       className="h-screen w-screen sm:w-full flex flex-col justify-center items-center bg-white dark:bg-dark-500 overflow-hidden"
       id="about-me"
     >
       <div className="D2 uppercase mt-24 sm:py-2 md:mb-8 dark:text-white">
-        About Me
+        {lang == "EN" ? "About Me" : "À PROPOS DE MOI"}
       </div>
       <div className="w-full h-auto max-h-full px-2 sm:px-8 flex flex-col sm:flex-row justify-center sm:justify-center items-center">
         <motion.div
@@ -27,7 +29,7 @@ export default function AboutMe() {
           ></Image>
         </motion.div>
         <div className="w-full h-full  md:w-3/5  mt-2 sm:ml-2 overflow-y-auto sm:overflow-hidden flex flex-col items-start justify-start sm:justify-center">
-          {data.map((text, i) => (
+          {(lang == "EN" ? data.EN : data.FR).map((text, i) => (
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -47,7 +49,9 @@ export default function AboutMe() {
             viewport={{ once: true }}
             className="inline-block w-full text-center font-semibold text-primary-500 dark:text-primary-400 my-1"
           >
-            Let&apos;s work together to create exceptional software solutions!
+            {lang == "EN"
+              ? "Let's work together to create exceptional software solutions!"
+              : "Travaillons ensemble pour créer des solutions logicielles exceptionnelles !"}
           </motion.blockquote>
         </div>
       </div>

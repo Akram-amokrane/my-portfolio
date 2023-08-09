@@ -3,8 +3,10 @@ import Skill from "@/components/Skill";
 import { motion } from "framer-motion";
 
 import data from "../data/Education.json";
+import { useLang } from "@/providers/LangProvider";
 
 export default function Education() {
+  const { lang } = useLang();
   return (
     <div
       className="sm:h-screen w-screen sm:w-full flex flex-col justify-around items-center bg-white dark:bg-dark-500"
@@ -12,10 +14,10 @@ export default function Education() {
     >
       <div className="flex flex-col justify-center items-center gap-2 mt-14 sm:mt-24">
         <div className="D2 uppercase py-1 sm:py-2 dark:text-white">
-          Education
+          {lang == "EN" ? "Education" : "Éducation"}
         </div>
         <div className="w-full h-full md:px-8 md:py-2 py-1  flex flex-col sm:flex-row justify-between gap-1 items-center md:mt-2 ">
-          {data.degrees.map((deg, i) => (
+          {(lang == "EN" ? data.degrees.EN : data.degrees.FR).map((deg, i) => (
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -40,7 +42,7 @@ export default function Education() {
           viewport={{ once: true }}
           className="D2 uppercase dark:text-white"
         >
-          Skills
+          {lang == "EN" ? "Skills" : "Compétences"}
         </motion.div>
         <div className="w-full h-full px-1 sm:px-4 pb-1 flex justify-center  flex-wrap gap-1 sm:gap-2 items-center mt-1 sm:mt-6">
           {data.skills.map((s, i) => (

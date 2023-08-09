@@ -2,9 +2,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
+import { useLang } from "@/providers/LangProvider";
 
 export default function Home() {
   const { theme } = useTheme();
+  const { lang } = useLang();
 
   useEffect(() => {
     console.log(theme);
@@ -24,7 +26,7 @@ export default function Home() {
             transition={{ type: "tween" }}
             className="text-2xl sm:D1 font-semibold whitespace-nowrap dark:text-dark-100"
           >
-            HEY, I AM
+            {lang == "EN" ? "HEY, I AM" : "SALUT,JE SUIS"}
           </motion.div>
           <motion.div
             initial={{ x: "-1000px" }}
@@ -46,7 +48,9 @@ export default function Home() {
           }}
           className="text-sm font-semibold sm:font-normal sm:text-2xl text-dark-500 whitespace-nowrap dark:text-dark-200"
         >
-          Software Engineer / Full Stack developer
+          {lang == "EN"
+            ? "Software Engineer / Full Stack developer"
+            : "Ingénieur en logiciel / Développeur Full Stack"}
         </motion.h2>
       </div>
       <motion.div

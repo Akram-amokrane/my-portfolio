@@ -15,6 +15,7 @@ import data from "../data/projects.json";
 import { motion } from "framer-motion";
 import { Navigation, EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useLang } from "@/providers/LangProvider";
 
 interface IProjectDetails {
   id: number;
@@ -29,8 +30,9 @@ interface IProjectDetails {
 
 export default function Projects() {
   const [width, setWidth] = useState(500);
-  const [selectedProject, setSelectedProject] = useState(data[0]);
+  const [selectedProject, setSelectedProject] = useState(data.EN[0]);
   const [showDetails, setShowDetails] = useState(false);
+  const { lang } = useLang();
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -51,14 +53,15 @@ export default function Projects() {
       id="projects"
     >
       <div className="D2 uppercase mt-16 md:mt-24 dark:text-white">
-        Projects
+        {lang == "EN" ? "Projects" : "Projets"}
       </div>
       <div className="w-72 sm:w-96  sm text-center py-2 text-dark-400 dark:text-dark-200">
-        Explore a collection of my diverse web projects, showcasing creativity
-        and technical excellence.
+        {lang == "EN"
+          ? "Explore a collection of my diverse projects, showcasing creativity and technical excellence."
+          : "Explorez une collection de mes différents projets, mettant en avant la créativité et l'excellence technique."}
       </div>
       <div className="w-[300px] md:w-full h-full   mt-2 overflow-hidden ">
-        {data.length > 0 && (
+        {data.EN.length > 0 && (
           <Swiper
             slidesPerView={width > 768 ? 3 : 1}
             // spaceBetween={5}
@@ -75,7 +78,7 @@ export default function Projects() {
             modules={[EffectCoverflow, Navigation, Pagination]}
             className="mySwiper"
           >
-            {data.map((p, i) => (
+            {(lang == "EN" ? data.EN : data.FR).map((p, i) => (
               <SwiperSlide key={p.id}>
                 <div
                   className="h-80 md:h-96"

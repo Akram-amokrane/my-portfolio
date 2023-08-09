@@ -1,4 +1,10 @@
-[
-  "Hi, I'm Akram Amokrane, an experienced full stack developer specializing in web, mobile, and desktop apps. I hold a Master's degree in Computer Science from Abderahmane Mira University in Algeria, blending education with practical expertise.",
-  "I excel in various technologies - HTML, CSS, JavaScript, Angular, React, Flutter, Ionic, JavaFx, Tauri - enabling me to handle diverse project needs. As a dedicated freelancer on Fiverr and Upwork, I'm committed to delivering exceptional results and exceeding client expectations."
-]
+{
+  "EN": [
+    "Hi, I'm Akram Amokrane, an experienced full stack developer specializing in web, mobile, and desktop apps. I hold a Master's degree in Computer Science from Abderahmane Mira University in Algeria, blending education with practical expertise.",
+    "I excel in various technologies - HTML, CSS, JavaScript, Angular, React, Flutter, Ionic, JavaFx, Tauri - enabling me to handle diverse project needs. As a dedicated freelancer on Fiverr and Upwork, I'm committed to delivering exceptional results and exceeding client expectations."
+  ],
+  "FR": [
+    "Salut, je suis Akram Amokrane, un développeur full stack expérimenté spécialisé dans les applications web, mobiles et de bureau. Je suis titulaire d'une maîtrise en informatique de l'Université Abderahmane Mira en Algérie, alliant éducation et expertise pratique.",
+    "J'excelle dans diverses technologies - HTML, CSS, JavaScript, Angular, React, Flutter, Ionic, JavaFx, Tauri - ce qui me permet de répondre aux besoins variés des projets. En tant que freelance dévoué sur Fiverr et Upwork, je m'engage à fournir des résultats exceptionnels et à dépasser les attentes des clients."
+  ]
+}

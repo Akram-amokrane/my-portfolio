@@ -2,6 +2,7 @@ import Skill from "./Skill";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { useLang } from "@/providers/LangProvider";
 
 interface IProject {
   title: string;
@@ -26,6 +27,7 @@ export default function ProjectDetails({
 }: IProject) {
   const [selectedImg, setSelectedImg] = useState(imgs[0]);
   const [width, setWidth] = useState(500);
+  const {lang} = useLang()
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -83,7 +85,7 @@ export default function ProjectDetails({
           </motion.div>
 
           <h3 className="font-semibold text-dark-300 pt-3 pb-1 dark:text-dark-200">
-            Features
+            {lang=="En"?"Features":"Caractéristiques"}
           </h3>
           <div>
             {features.map((f, i) => (

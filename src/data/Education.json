@@ -1,21 +1,40 @@
 {
-  "degrees": [
-    {
-      "date": "2017-2018",
-      "title": "High school diploma",
-      "from": "Kadi Athmane High School, Tichy"
-    },
-    {
-      "date": "2020-2021",
-      "title": "Bachelor's degree in si",
-      "from": "Abderrahmane Mira University, Bejaia"
-    },
-    {
-      "date": "2022-2023",
-      "title": "master's degree in sia",
-      "from": "Abderrahmane Mira University, Bejaia"
-    }
-  ],
+  "degrees": {
+    "EN": [
+      {
+        "date": "2017-2018",
+        "title": "High school diploma",
+        "from": "Kadi Athmane High School, Tichy"
+      },
+      {
+        "date": "2020-2021",
+        "title": "Bachelor's degree in si",
+        "from": "Abderrahmane Mira University, Bejaia"
+      },
+      {
+        "date": "2022-2023",
+        "title": "master's degree in sia",
+        "from": "Abderrahmane Mira University, Bejaia"
+      }
+    ],
+    "FR": [
+      {
+        "date": "2017-2018",
+        "title": "Diplôme baccalauréat",
+        "from": "Lycée Kadi Athmane, Tichy"
+      },
+      {
+        "date": "2020-2021",
+        "title": "Licence en SI",
+        "from": "Université Abderrahmane Mira, Bejaia"
+      },
+      {
+        "date": "2022-2023",
+        "title": "Master en SIA",
+        "from": "Université Abderrahmane Mira, Bejaia"
+      }
+    ]
+  },
   "skills": [
     "Javascript",
     "Typescript",

@@ -14,32 +14,35 @@ import {
 
 import { useTheme } from "next-themes";
 
+import { useLang } from "@/providers/LangProvider";
+
 export default function NavBar() {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
+  const { lang, setLang } = useLang();
 
   const navLinks = [
     {
       id: "home",
-      name: "Home",
+      name: lang == "EN" ? "Home" : "Accueil",
       default: true,
       icon: HomeIcon,
     },
     {
       id: "projects",
-      name: "Projects",
+      name: lang == "EN" ? "Projects" : "Projets",
       default: false,
       icon: BriefcaseIcon,
     },
     {
       id: "education",
-      name: "Education",
+      name: lang == "EN" ? "Education" : "Éducation",
       default: false,
       icon: AcademicCapIcon,
     },
     {
       id: "about-me",
-      name: "About me",
+      name: lang == "EN" ? "About me" : "À propos de moi",
       default: false,
       icon: IdentificationIcon,
     },
@@ -56,6 +59,10 @@ export default function NavBar() {
 
   const toggleTheme = () => {
     setTheme(theme == "light" ? "dark" : "light");
+  };
+
+  const toggleLanguage = () => {
+    setLang(lang == "EN" ? "FR" : "EN");
   };
 
   return (
@@ -94,13 +101,16 @@ export default function NavBar() {
         ))}
       </div>
 
-      <div className="flex flex-col justify-center items-center mx-2 cursor-pointer">
-        <div
-          onClick={() => toggleTheme()}
-          className="text-xl peer-checked:text-secondary-500"
-        >
+      <div className="flex  justify-center items-center gap-3 mx-2 cursor-pointer">
+        <div onClick={() => toggleTheme()}>
           <MoonIcon className="text-primary-800 w-6 h-6 sm:w-8 sm:h-8 dark:hidden"></MoonIcon>
           <SunIcon className="text-accent-400 hidden w-6 h-6 sm:w-8 sm:h-8 dark:block"></SunIcon>
+        </div>
+        <div
+          onClick={() => toggleLanguage()}
+          className="font-semibold text-secondary-400"
+        >
+          {lang}
         </div>
       </div>
     </nav>
