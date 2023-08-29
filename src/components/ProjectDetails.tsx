@@ -2,7 +2,9 @@ import Skill from "./Skill";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { AiOutlineGithub, AiOutlinePlayCircle } from "react-icons/ai";
 import { useLang } from "@/providers/LangProvider";
+import Link from "next/link";
 
 interface IProject {
   title: string;
@@ -11,7 +13,7 @@ interface IProject {
   features: Array<string>;
   techs: Array<string>;
   imgs: Array<string>;
-  bg: string;
+  links?: { github?: string; demo?: string };
   onClose: () => void;
 }
 
@@ -22,12 +24,12 @@ export default function ProjectDetails({
   features,
   techs,
   imgs,
-  bg,
+  links,
   onClose,
 }: IProject) {
   const [selectedImg, setSelectedImg] = useState(imgs[0]);
   const [width, setWidth] = useState(500);
-  const {lang} = useLang()
+  const { lang } = useLang();
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -35,13 +37,33 @@ export default function ProjectDetails({
 
   return (
     <div className="w-full h-full relative flex flex-col sm:flex-row  justify-start items-center overflow-hidden border-dark-200 dark:border-dark-800 border-[1px] border-solid md:rounded-xl ">
-      <div className="w-6 h-6 absolute top-2 right-2">
+      <div className="flex justify-between items-center gap-2  h-6 absolute top-2 right-2">
         <XMarkIcon
           className="w-6 h-6 text-dark-400 dark:text-dark-100 hover:text-accent-600 cursor-pointer "
           onClick={onClose}
         />
       </div>
       <motion.div className="w-full sm:w-2/5 h-2/5 sm:h-full flex flex-col items-center justify-center p-2  bg-[#ADB5BD]">
+        {links ? (
+          <div className="flex justify-between items-center gap-6">
+            {links.demo ? (
+              <Link href={links.demo} target="blank">
+                <AiOutlinePlayCircle className="w-8 h-8 text-dark-500 hover:text-primary-700" />
+              </Link>
+            ) : (
+              ""
+            )}
+            {links.github ? (
+              <Link href={links.github} target="blank">
+                <AiOutlineGithub className="w-8 h-8 text-dark-500 hover:text-primary-700" />
+              </Link>
+            ) : (
+              ""
+            )}
+          </div>
+        ) : (
+          ""
+        )}
         <div
           className="w-full h-5/6 sm:h-1/2 "
           style={{
@@ -85,7 +107,7 @@ export default function ProjectDetails({
           </motion.div>
 
           <h3 className="font-semibold text-dark-300 pt-3 pb-1 dark:text-dark-200">
-            {lang=="En"?"Features":"Caractéristiques"}
+            {lang == "En" ? "Features" : "Caractéristiques"}
           </h3>
           <div>
             {features.map((f, i) => (

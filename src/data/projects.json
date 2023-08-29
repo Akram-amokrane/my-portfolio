@@ -93,6 +93,25 @@
       "bg": "primary"
     },
     {
+      "id": 5,
+      "title": "Weather Live",
+      "type": "Web Application / Weather",
+      "description": [
+        "The Weather Application is a feature-rich and user-friendly desktop solution that offers real-time weather data for locations worldwide. Developed with a focus on user experience and functionality, this application provides comprehensive weather information, including temperature, pressure, cloud cover percentage, and more."
+      ],
+      "features": [
+        "Live Weather Data: Stay informed about current weather conditions, ensuring you are prepared for any changes in your environment.",
+        "Location Search: Seamlessly search for locations by name, city, country, or geographical coordinates.",
+        "User-Friendly Interface: Enjoy a user-friendly and intuitive interface that simplifies weather data retrieval and interpretation."
+      ],
+      "techs": ["Vue"],
+      "imgs": ["/captures/weather/web.webp"],
+      "links": {
+        "github": "https://github.com/Akram-amokrane/WeatherLive",
+        "demo": "https://weatherlivve.vercel.app/"
+      }
+    },
+    {
       "id": 7,
       "title": "EPB",
       "type": "Desktop Application / Management",

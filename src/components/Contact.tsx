@@ -22,28 +22,28 @@ export default function Contact({ isWhite = false }: IContact) {
         target="_blank"
         className="block"
       >
-        <BiLogoGithub className="w-10 h-10 hover:text-primary-600" />
+        <BiLogoGithub className="w-10 h-10 hover:text-secondary-600" />
       </Link>
       <Link
         href={"mailto:amokraneakram54@gmail.com"}
         target="_blank"
         className="block"
       >
-        <BiLogoGmail className="w-10 h-10 hover:text-primary-600" />
+        <BiLogoGmail className="w-10 h-10 hover:text-secondary-600" />
       </Link>
       <Link
         href={"https://www.linkedin.com/in/akram-amokrane-9b1509222"}
         target="_blank"
         className="block"
       >
-        <BiLogoLinkedinSquare className="w-10 h-10 hover:text-primary-600" />
+        <BiLogoLinkedinSquare className="w-10 h-10 hover:text-secondary-600" />
       </Link>
       <Link
         href={"https://www.instagram.com/akram.amokrane/"}
         target="_blank"
         className="block"
       >
-        <RiInstagramFill className="w-10 h-10 hover:text-primary-600" />
+        <RiInstagramFill className="w-10 h-10 hover:text-secondary-600" />
       </Link>
     </div>
   );
