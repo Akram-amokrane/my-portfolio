@@ -15,8 +15,7 @@
         "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
       ],
       "techs": ["JavaFx", "MySql"],
-      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
-      "bg": "primary"
+      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"]
     },
     {
       "id": 2,
@@ -42,8 +41,7 @@
         "/captures/chomerce/products-admin.webp",
         "/captures/chomerce/orders-admin.webp",
         "/captures/chomerce/cat-admin.webp"
-      ],
-      "bg": "accent"
+      ]
     },
     {
       "id": 3,
@@ -65,8 +63,7 @@
         "/captures/portfolio/about-me.webp",
         "/captures/portfolio/education.webp",
         "/captures/portfolio/projects.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
       "id": 4,
@@ -89,11 +86,29 @@
         "/captures/bmt/auth.webp",
         "/captures/bmt/dashboard.webp",
         "/captures/bmt/prediction.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
-      "id": 1,
+      "id": 5,
+      "title": "Weather Live",
+      "type": "Web Application / Weather",
+      "description": [
+        "The Weather Application is a feature-rich and user-friendly desktop solution that offers real-time weather data for locations worldwide. Developed with a focus on user experience and functionality, this application provides comprehensive weather information, including temperature, pressure, cloud cover percentage, and more."
+      ],
+      "features": [
+        "Live Weather Data: Stay informed about current weather conditions, ensuring you are prepared for any changes in your environment.",
+        "Location Search: Seamlessly search for locations by name, city, country, or geographical coordinates.",
+        "User-Friendly Interface: Enjoy a user-friendly and intuitive interface that simplifies weather data retrieval and interpretation."
+      ],
+      "techs": ["Vue"],
+      "imgs": ["/captures/weather/web.webp"],
+      "links": {
+        "github": "https://github.com/Akram-amokrane/WeatherLive",
+        "demo": "https://weatherlivve.vercel.app/"
+      }
+    },
+    {
+      "id": 7,
       "title": "EPB",
       "type": "Desktop Application / Management",
       "description": [
@@ -107,11 +122,10 @@
         "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
       ],
       "techs": ["JavaFx", "MySql"],
-      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
-      "bg": "primary"
+      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"]
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Chomerce",
       "type": "Web Application / e-commerce",
       "description": [
@@ -134,11 +148,10 @@
         "/captures/chomerce/products-admin.webp",
         "/captures/chomerce/orders-admin.webp",
         "/captures/chomerce/cat-admin.webp"
-      ],
-      "bg": "accent"
+      ]
     },
     {
-      "id": 3,
+      "id": 9,
       "title": "My Portfolio",
       "type": "Website / Portfolio",
       "description": [
@@ -157,11 +170,10 @@
         "/captures/portfolio/about-me.webp",
         "/captures/portfolio/education.webp",
         "/captures/portfolio/projects.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
-      "id": 4,
+      "id": 10,
       "title": "BMT",
       "type": "Desktop Application / Business Intelligence",
       "description": [
@@ -181,8 +193,7 @@
         "/captures/bmt/auth.webp",
         "/captures/bmt/dashboard.webp",
         "/captures/bmt/prediction.webp"
-      ],
-      "bg": "primary"
+      ]
     }
   ],
   "FR": [
@@ -201,8 +212,7 @@
         "Téléchargement de fichiers Excel : Permet aux utilisateurs de télécharger un fichier Excel contenant les données d'arrivée, d'embarquement, d'entrée et de tri des conteneurs."
       ],
       "techs": ["JavaFx", "MySql"],
-      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
-      "bg": "primary"
+      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"]
     },
     {
       "id": 2,
@@ -228,8 +238,7 @@
         "/captures/chomerce/products-admin.webp",
         "/captures/chomerce/orders-admin.webp",
         "/captures/chomerce/cat-admin.webp"
-      ],
-      "bg": "accent"
+      ]
     },
     {
       "id": 3,
@@ -251,8 +260,7 @@
         "/captures/portfolio/about-me.webp",
         "/captures/portfolio/education.webp",
         "/captures/portfolio/projects.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
       "id": 4,
@@ -275,11 +283,10 @@
         "/captures/bmt/auth.webp",
         "/captures/bmt/dashboard.webp",
         "/captures/bmt/prediction.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
-      "id": 1,
+      "id": 7,
       "title": "EPB",
       "type": "Application de bureau / Gestion",
       "description": [
@@ -293,11 +300,10 @@
         "Téléchargement de fichiers Excel : Permet aux utilisateurs de télécharger un fichier Excel contenant les données d'arrivée, d'embarquement, d'entrée et de tri des conteneurs."
       ],
       "techs": ["JavaFx", "MySql"],
-      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
-      "bg": "primary"
+      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"]
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Chomerce",
       "type": "Application Web / e-commerce",
       "description": [
@@ -320,11 +326,10 @@
         "/captures/chomerce/products-admin.webp",
         "/captures/chomerce/orders-admin.webp",
         "/captures/chomerce/cat-admin.webp"
-      ],
-      "bg": "accent"
+      ]
     },
     {
-      "id": 3,
+      "id": 9,
       "title": "Mon Portfolio",
       "type": "Site Web / Portfolio",
       "description": [
@@ -343,11 +348,10 @@
         "/captures/portfolio/about-me.webp",
         "/captures/portfolio/education.webp",
         "/captures/portfolio/projects.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
-      "id": 4,
+      "id": 10,
       "title": "BMT",
       "type": "Application de bureau / Systeme d'aide a la décision",
       "description": [
@@ -367,8 +371,7 @@
         "/captures/bmt/auth.webp",
         "/captures/bmt/dashboard.webp",
         "/captures/bmt/prediction.webp"
-      ],
-      "bg": "primary"
+      ]
     }
   ]
 }

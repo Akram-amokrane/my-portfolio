@@ -1,7 +1,7 @@
 "use client";
 import NavBar from "@/components/NavBar";
 import AboutMe from "@/pages/AboutMe";
-import Education from "@/pages/Education";
+import EducationV2 from "@/pages/EducationV2";
 import Footer from "@/pages/footer";
 import Home from "@/pages/home";
 import Projects from "@/pages/projects";
@@ -18,7 +18,7 @@ export default function Main() {
         <div className="container mx-auto w-full h-auto px-2 sm:px-0 lg:px-32 overflow-y-auto overflow-x-hidden flex flex-col justify-center  bg-white dark:bg-dark-500">
           <Home></Home>
           <Projects></Projects>
-          <Education></Education>
+          <EducationV2></EducationV2>
           <AboutMe></AboutMe>
         </div>
         <Footer></Footer>

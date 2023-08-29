@@ -25,7 +25,6 @@ interface IProjectDetails {
   features: Array<string>;
   techs: Array<string>;
   imgs: Array<string>;
-  bg: string;
 }
 
 export default function Projects() {
