@@ -71,14 +71,14 @@ export default function Home() {
         initial={{ x: "+1000px" }}
         animate={{ x: "0px" }}
         transition={{ type: "tween", ease: "easeInOut", duration: 1 }}
-        className="w-[600px] h-[600px]   sm:w-[600px] sm:h-[600px] absolute top-16 sm:top-12 md:right-0 "
+        className="w-80 h-80   sm:w-[600px] sm:h-[600px] absolute top-16 sm:top-12 md:right-0 "
       >
         <Image
           src={`/images/me-draw-f.webp`}
           alt="me drawed"
           width={600}
           height={600}
-          className="dark:hidden"
+          className="dark:hidden w-80 h-80 sm:w-[600px] sm:h-[600px]"
         ></Image>
         <Image
           src={`/images/me-draw-f-dark.webp`}

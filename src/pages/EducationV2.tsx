@@ -44,7 +44,7 @@ export default function EducationV2() {
         >
           {lang == "EN" ? "Skills" : "Compétences"}
         </motion.div>
-        <div className="w-full h-full px-1 sm:px-4 pb-1 flex justify-center  flex-wrap gap-1 sm:gap-2 items-center mt-1 sm:mt-6">
+        <div className="w-full h-full px-1 sm:px-4 pb-1 flex sm:justify-center  flex-nowrap sm:flex-wrap gap-1 sm:gap-2 items-start sm:items-center mt-1 sm:mt-6">
           {["Frontend", "Backend", "Databases", "Data science"].map(
             (stack, i) => (
               <motion.div
