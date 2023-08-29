@@ -47,7 +47,15 @@ export default function EducationV2() {
         <div className="w-full h-full px-1 sm:px-4 pb-1 flex justify-center  flex-wrap gap-1 sm:gap-2 items-center mt-1 sm:mt-6">
           {["Frontend", "Backend", "Databases", "Data science"].map(
             (stack, i) => (
-              <SkillsBox stack={stack} key={i} />
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: i * 0.3 + 0.7 }}
+                viewport={{ once: true }}
+                key={i}
+              >
+                <SkillsBox stack={stack} />
+              </motion.div>
             )
           )}
         </div>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import { useLang } from "@/providers/LangProvider";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -52,6 +53,19 @@ export default function Home() {
             ? "Software Engineer / Full Stack developer"
             : "Ingénieur en logiciel / Développeur Full Stack"}
         </motion.h2>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            type: "tween",
+            delay: 0.9,
+            ease: "easeInOut",
+            duration: 0.4,
+          }}
+          className="mt-8"
+        >
+          <Contact />
+        </motion.div>
       </div>
       <motion.div
         initial={{ x: "+1000px" }}
