@@ -15,8 +15,7 @@
         "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
       ],
       "techs": ["JavaFx", "MySql"],
-      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
-      "bg": "primary"
+      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"]
     },
     {
       "id": 2,
@@ -42,8 +41,7 @@
         "/captures/chomerce/products-admin.webp",
         "/captures/chomerce/orders-admin.webp",
         "/captures/chomerce/cat-admin.webp"
-      ],
-      "bg": "accent"
+      ]
     },
     {
       "id": 3,
@@ -65,8 +63,7 @@
         "/captures/portfolio/about-me.webp",
         "/captures/portfolio/education.webp",
         "/captures/portfolio/projects.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
       "id": 4,
@@ -89,8 +86,7 @@
         "/captures/bmt/auth.webp",
         "/captures/bmt/dashboard.webp",
         "/captures/bmt/prediction.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
       "id": 5,
@@ -126,8 +122,7 @@
         "Excel File Upload: Allows users to upload an Excel file containing containers' landing, embarking, ship entries, and sorting data."
       ],
       "techs": ["JavaFx", "MySql"],
-      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
-      "bg": "primary"
+      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"]
     },
     {
       "id": 8,
@@ -153,8 +148,7 @@
         "/captures/chomerce/products-admin.webp",
         "/captures/chomerce/orders-admin.webp",
         "/captures/chomerce/cat-admin.webp"
-      ],
-      "bg": "accent"
+      ]
     },
     {
       "id": 9,
@@ -176,8 +170,7 @@
         "/captures/portfolio/about-me.webp",
         "/captures/portfolio/education.webp",
         "/captures/portfolio/projects.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
       "id": 10,
@@ -200,8 +193,7 @@
         "/captures/bmt/auth.webp",
         "/captures/bmt/dashboard.webp",
         "/captures/bmt/prediction.webp"
-      ],
-      "bg": "primary"
+      ]
     }
   ],
   "FR": [
@@ -220,8 +212,7 @@
         "Téléchargement de fichiers Excel : Permet aux utilisateurs de télécharger un fichier Excel contenant les données d'arrivée, d'embarquement, d'entrée et de tri des conteneurs."
       ],
       "techs": ["JavaFx", "MySql"],
-      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
-      "bg": "primary"
+      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"]
     },
     {
       "id": 2,
@@ -247,8 +238,7 @@
         "/captures/chomerce/products-admin.webp",
         "/captures/chomerce/orders-admin.webp",
         "/captures/chomerce/cat-admin.webp"
-      ],
-      "bg": "accent"
+      ]
     },
     {
       "id": 3,
@@ -270,8 +260,7 @@
         "/captures/portfolio/about-me.webp",
         "/captures/portfolio/education.webp",
         "/captures/portfolio/projects.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
       "id": 4,
@@ -294,8 +283,7 @@
         "/captures/bmt/auth.webp",
         "/captures/bmt/dashboard.webp",
         "/captures/bmt/prediction.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
       "id": 7,
@@ -312,8 +300,7 @@
         "Téléchargement de fichiers Excel : Permet aux utilisateurs de télécharger un fichier Excel contenant les données d'arrivée, d'embarquement, d'entrée et de tri des conteneurs."
       ],
       "techs": ["JavaFx", "MySql"],
-      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"],
-      "bg": "primary"
+      "imgs": ["/captures/epb/login.webp", "/captures/epb/emb.webp"]
     },
     {
       "id": 8,
@@ -339,8 +326,7 @@
         "/captures/chomerce/products-admin.webp",
         "/captures/chomerce/orders-admin.webp",
         "/captures/chomerce/cat-admin.webp"
-      ],
-      "bg": "accent"
+      ]
     },
     {
       "id": 9,
@@ -362,8 +348,7 @@
         "/captures/portfolio/about-me.webp",
         "/captures/portfolio/education.webp",
         "/captures/portfolio/projects.webp"
-      ],
-      "bg": "primary"
+      ]
     },
     {
       "id": 10,
@@ -386,8 +371,7 @@
         "/captures/bmt/auth.webp",
         "/captures/bmt/dashboard.webp",
         "/captures/bmt/prediction.webp"
-      ],
-      "bg": "primary"
+      ]
     }
   ]
 }

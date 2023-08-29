@@ -7,7 +7,7 @@ interface IProject {
   features: Array<string>;
   techs: Array<string>;
   imgs: Array<string>;
-  bg: string;
+  links?: { github?: string; demo?: string };
 }
 
 export default function Project({
@@ -17,7 +17,7 @@ export default function Project({
   features,
   techs,
   imgs,
-  bg,
+  links,
 }: IProject) {
   return (
     <div className="min-w-full w-full h-full flex justify-center items-center ">
