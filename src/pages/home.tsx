@@ -57,13 +57,21 @@ export default function Home() {
         initial={{ x: "+1000px" }}
         animate={{ x: "0px" }}
         transition={{ type: "tween", ease: "easeInOut", duration: 1 }}
-        className="w-full h-2/3  sm:w-[600px] sm:h-[600px] absolute top-16 sm:top-12 md:right-0 "
+        className="w-[600px] h-[600px]   sm:w-[600px] sm:h-[600px] absolute top-16 sm:top-12 md:right-0 "
       >
         <Image
-          src={`/images/me-draw-f${theme == "dark" ? "-dark" : ""}.webp`}
+          src={`/images/me-draw-f.webp`}
           alt="me drawed"
           width={600}
           height={600}
+          className="dark:hidden"
+        ></Image>
+        <Image
+          src={`/images/me-draw-f-dark.webp`}
+          alt="me drawed"
+          width={600}
+          height={600}
+          className="hidden dark:block"
         ></Image>
       </motion.div>
     </div>

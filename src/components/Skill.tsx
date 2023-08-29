@@ -21,6 +21,9 @@ import {
   SiMongodb,
   SiTailwindcss,
   SiFigma,
+  SiVuedotjs,
+  SiSpringboot,
+  SiSpring,
 } from "react-icons/si";
 import { FaNodeJs, FaJava } from "react-icons/fa";
 import { IconType } from "react-icons";
@@ -78,6 +81,10 @@ export default function Skill({ name }: ISkill) {
         return <SiMongodb size={24} />;
       case "TailWind":
         return <SiTailwindcss size={24} />;
+      case "Vue":
+        return <SiVuedotjs size={24} />;
+      case "Spring":
+        return <SiSpring size={24} />;
       case "Figma":
         return <SiFigma size={24} />;
     }

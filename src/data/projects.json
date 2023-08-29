@@ -93,7 +93,7 @@
       "bg": "primary"
     },
     {
-      "id": 1,
+      "id": 7,
       "title": "EPB",
       "type": "Desktop Application / Management",
       "description": [
@@ -111,7 +111,7 @@
       "bg": "primary"
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Chomerce",
       "type": "Web Application / e-commerce",
       "description": [
@@ -138,7 +138,7 @@
       "bg": "accent"
     },
     {
-      "id": 3,
+      "id": 9,
       "title": "My Portfolio",
       "type": "Website / Portfolio",
       "description": [
@@ -161,7 +161,7 @@
       "bg": "primary"
     },
     {
-      "id": 4,
+      "id": 10,
       "title": "BMT",
       "type": "Desktop Application / Business Intelligence",
       "description": [
@@ -279,7 +279,7 @@
       "bg": "primary"
     },
     {
-      "id": 1,
+      "id": 7,
       "title": "EPB",
       "type": "Application de bureau / Gestion",
       "description": [
@@ -297,7 +297,7 @@
       "bg": "primary"
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Chomerce",
       "type": "Application Web / e-commerce",
       "description": [
@@ -324,7 +324,7 @@
       "bg": "accent"
     },
     {
-      "id": 3,
+      "id": 9,
       "title": "Mon Portfolio",
       "type": "Site Web / Portfolio",
       "description": [
@@ -347,7 +347,7 @@
       "bg": "primary"
     },
     {
-      "id": 4,
+      "id": 10,
       "title": "BMT",
       "type": "Application de bureau / Systeme d'aide a la décision",
       "description": [

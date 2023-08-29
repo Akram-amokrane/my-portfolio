@@ -29,23 +29,20 @@ export default function AboutMe() {
           ></Image>
         </motion.div>
         <div className="w-full h-full  md:w-3/5  mt-2 sm:ml-2 overflow-y-auto sm:overflow-hidden flex flex-col items-start justify-start sm:justify-center">
-          {(lang == "EN" ? data.EN : data.FR).map((text, i) => (
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.2, delay: i * 0.3 }}
-              viewport={{ once: true }}
-              key={i}
-              className="text-xs sm:text-sm md:text-base indent-8 text-justify py-1 dark:text-dark-200"
-            >
-              {text}
-            </motion.p>
-          ))}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-xs sm:text-sm md:text-base indent-8 text-justify py-1 dark:text-dark-200"
+          >
+            {lang == "EN" ? data.EN : data.FR}
+          </motion.p>
 
           <motion.blockquote
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 0.9 }}
+            transition={{ duration: 0.2, delay: 0.6 }}
             viewport={{ once: true }}
             className="inline-block w-full text-center font-semibold text-primary-500 dark:text-primary-400 my-1"
           >
