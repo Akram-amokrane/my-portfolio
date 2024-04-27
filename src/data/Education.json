@@ -60,9 +60,26 @@
     "Figma"
   ],
   "skills2": {
-    "Frontend": ["Angular", "React", "Vue", "Ionic", "TailWind"],
-    "Backend": ["Express", "Flask", "Spring"],
-    "Data science": ["TensorFlow", "Keras"],
-    "Databases": ["MySql", "MongoDb", "Firebase"]
+    "Frontend": [
+      "Angular",
+      "React",
+      "Vue",
+      "Ionic",
+      "TailWind"
+    ],
+    "Backend": [
+      "Express",
+      "Flask",
+      "Nest"
+    ],
+    "Data science": [
+      "TensorFlow",
+      "Keras"
+    ],
+    "Databases": [
+      "MySql",
+      "MongoDb",
+      "Firebase"
+    ]
   }
 }

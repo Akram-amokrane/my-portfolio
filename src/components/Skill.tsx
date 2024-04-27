@@ -24,6 +24,7 @@ import {
   SiVuedotjs,
   SiSpringboot,
   SiSpring,
+  SiNestjs,
 } from "react-icons/si";
 import { FaNodeJs, FaJava } from "react-icons/fa";
 import { IconType } from "react-icons";
@@ -53,6 +54,8 @@ export default function Skill({ name }: ISkill) {
         return <FaNodeJs size={24} />;
       case "Express":
         return <SiExpress size={24} />;
+      case "Nest":
+        return <SiNestjs size={24} />;
       case "Ionic":
         return <SiIonic size={24} />;
       case "Tauri":
