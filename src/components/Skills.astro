@@ -82,11 +82,13 @@ const ACCENT: Record<string, string> = {
   <div class="pointer-events-none absolute inset-0 -z-10 grid-bg opacity-60 [mask-image:radial-gradient(ellipse_at_50%_0%,#000,transparent_70%)]" aria-hidden="true"></div>
 
   <div class="mx-auto max-w-7xl px-5 sm:px-8">
-    <SectionHeading eyebrow={t.skills.eyebrow} title={t.skills.title} lead={t.skills.lead} index="02" />
+    {/* Heading and sphere share the top row, which frees the full width below
+        for the category grid (and fills what was dead space beside the title). */}
+    <div class="grid items-center gap-10 lg:grid-cols-[1fr_0.85fr] lg:gap-14">
+      <SectionHeading eyebrow={t.skills.eyebrow} title={t.skills.title} lead={t.skills.lead} index="02" />
 
-    <div class="mt-14 grid items-start gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
       <!-- 3D tag sphere -->
-      <div data-reveal="scale" class="relative order-2 lg:order-1 lg:sticky lg:top-28">
+      <div data-reveal="scale" class="relative">
         <div class="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[radial-gradient(circle_at_50%_50%,var(--glow-a),transparent_62%)] blur-2xl" aria-hidden="true"></div>
 
         {/* Without JS this stays a tidy centred tag cloud; the script flips it
@@ -110,59 +112,62 @@ const ACCENT: Record<string, string> = {
           {t.skills.hint}
         </p>
       </div>
+    </div>
 
-      <!-- Categories -->
-      <div class="order-1 space-y-3.5 lg:order-2">
-        {t.skills.groups.map((group, gi) => (
-          <div
-            data-reveal="left"
-            style={`--reveal-delay:${gi * 70}ms`}
-            class="card spotlight noise relative overflow-hidden p-5 sm:p-6"
-          >
-            <div class="flex items-start gap-3.5">
-              <span
-                class="grid size-10 shrink-0 place-items-center rounded-xl border border-line"
-                style={`background:color-mix(in oklab, ${ACCENT[group.accent]} 12%, transparent); color:${ACCENT[group.accent]}`}
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-5" aria-hidden="true">
-                  <path d={ICONS[group.icon]} stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
+    {/* Four equal tiles: `grid-cols-2` matches their widths, `auto-rows-fr`
+        matches their heights across both rows. */}
+    <div class="mt-12 grid auto-rows-fr gap-4 sm:grid-cols-2">
+      {t.skills.groups.map((group, gi) => (
+        <div
+          data-reveal="scale"
+          style={`--reveal-delay:${gi * 80}ms`}
+          class="card spotlight noise relative flex flex-col overflow-hidden p-5 sm:p-7"
+        >
+          <div class="flex items-start gap-3.5">
+            <span
+              class="grid size-10 shrink-0 place-items-center rounded-xl border border-line"
+              style={`background:color-mix(in oklab, ${ACCENT[group.accent]} 12%, transparent); color:${ACCENT[group.accent]}`}
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-5" aria-hidden="true">
+                <path d={ICONS[group.icon]} stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
 
-              <div class="min-w-0">
-                <h3 class="font-display text-base font-semibold tracking-tight sm:text-lg">{group.title}</h3>
-                {/* Evidence, not a self-scored level. */}
-                <p class="mt-1 text-pretty text-[13px] leading-snug text-muted">{group.note}</p>
-              </div>
+            <div class="min-w-0">
+              <h3 class="font-display text-base font-semibold tracking-tight sm:text-lg">{group.title}</h3>
+              {/* Evidence, not a self-scored level. */}
+              <p class="mt-1 text-pretty text-[13px] leading-snug text-muted">{group.note}</p>
             </div>
-
-            <ul class="mt-4 flex flex-wrap gap-2">
-              {group.skills.map((tech) => {
-                const brand = brandIcons[tech.icon];
-                return (
-                  <li
-                    class="tech inline-flex items-center gap-2 rounded-xl border border-line bg-surface-2/60 px-3 py-2 transition-[background-color,border-color,box-shadow] duration-350"
-                    style={brand
-                      ? `--brand-l:${brand.light};--brand-d:${brand.dark}`
-                      : `--brand-l:${ACCENT[group.accent]};--brand-d:${ACCENT[group.accent]}`}
-                  >
-                    {brand ? (
-                      <svg class="tech__mark size-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d={brand.path} />
-                      </svg>
-                    ) : (
-                      <svg class="tech__mark size-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-                        <path d={GLYPHS[tech.icon] ?? GLYPHS.api} stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    )}
-                    <span class="whitespace-nowrap text-[13px] font-medium">{tech.name}</span>
-                  </li>
-                );
-              })}
-            </ul>
           </div>
-        ))}
-      </div>
+
+          {/* `mt-auto` pins the chips to the bottom, so tiles with fewer
+              technologies still line up with their neighbour. */}
+          <ul class="mt-auto flex flex-wrap gap-2 pt-6">
+            {group.skills.map((tech) => {
+              const brand = brandIcons[tech.icon];
+              return (
+                <li
+                  class="tech inline-flex items-center gap-2 rounded-xl border border-line bg-surface-2/60 px-3 py-2 transition-[background-color,border-color,box-shadow] duration-350"
+                  style={brand
+                    ? `--brand-l:${brand.light};--brand-d:${brand.dark}`
+                    : `--brand-l:${ACCENT[group.accent]};--brand-d:${ACCENT[group.accent]}`}
+                >
+                  {brand ? (
+                    <svg class="tech__mark size-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d={brand.path} />
+                    </svg>
+                  ) : (
+                    <svg class="tech__mark size-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                      <path d={GLYPHS[tech.icon] ?? GLYPHS.api} stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  )}
+                  <span class="whitespace-nowrap text-[13px] font-medium">{tech.name}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))}
     </div>
   </div>
 </section>

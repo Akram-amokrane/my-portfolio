@@ -138,23 +138,16 @@ const fr: Content = {
         ],
       },
       {
-        title: 'Bases de données', accent: 'violet', icon: 'database',
-        note: 'Modélisation, migrations et optimisation de requêtes.',
+        title: 'Données & Infrastructure', accent: 'violet', icon: 'database',
+        note: 'Modélisation, migrations et environnements conteneurisés.',
         skills: [
           { name: 'PostgreSQL', icon: 'postgresql' }, { name: 'MySQL', icon: 'mysql' },
-          { name: 'MongoDB', icon: 'mongodb' },
+          { name: 'MongoDB', icon: 'mongodb' }, { name: 'Docker', icon: 'docker' },
+          { name: 'Docker Compose', icon: 'compose' }, { name: 'Git', icon: 'git' },
         ],
       },
       {
-        title: 'DevOps & Outils', accent: 'ember', icon: 'terminal',
-        note: 'Environnements conteneurisés, du développement au déploiement.',
-        skills: [
-          { name: 'Docker', icon: 'docker' }, { name: 'Docker Compose', icon: 'compose' },
-          { name: 'Git', icon: 'git' },
-        ],
-      },
-      {
-        title: 'IA & Data', accent: 'cyan', icon: 'brain',
+        title: 'IA & Machine Learning', accent: 'ember', icon: 'brain',
         note: 'Article scientifique publié · enseigné de la L2 au M2.',
         skills: [
           { name: 'Machine Learning', icon: 'brain' }, { name: 'Deep Learning', icon: 'layers' },
@@ -340,23 +333,16 @@ const en: Content = {
         ],
       },
       {
-        title: 'Databases', accent: 'violet', icon: 'database',
-        note: 'Schema design, migrations and query optimisation.',
+        title: 'Data & Infrastructure', accent: 'violet', icon: 'database',
+        note: 'Schema design, migrations and containerised environments.',
         skills: [
           { name: 'PostgreSQL', icon: 'postgresql' }, { name: 'MySQL', icon: 'mysql' },
-          { name: 'MongoDB', icon: 'mongodb' },
+          { name: 'MongoDB', icon: 'mongodb' }, { name: 'Docker', icon: 'docker' },
+          { name: 'Docker Compose', icon: 'compose' }, { name: 'Git', icon: 'git' },
         ],
       },
       {
-        title: 'DevOps & Tooling', accent: 'ember', icon: 'terminal',
-        note: 'Containerised environments, from development to deployment.',
-        skills: [
-          { name: 'Docker', icon: 'docker' }, { name: 'Docker Compose', icon: 'compose' },
-          { name: 'Git', icon: 'git' },
-        ],
-      },
-      {
-        title: 'AI & Data', accent: 'cyan', icon: 'brain',
+        title: 'AI & Machine Learning', accent: 'ember', icon: 'brain',
         note: 'Published research paper · taught at undergraduate and graduate level.',
         skills: [
           { name: 'Machine Learning', icon: 'brain' }, { name: 'Deep Learning', icon: 'layers' },
