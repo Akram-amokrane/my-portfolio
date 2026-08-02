@@ -287,6 +287,16 @@ body {
 [data-reveal='right'] {
   transform: translate3d(32px, 0, 0);
 }
+
+/* Below `sm` these cards are full-bleed, so a horizontal start offset pushes
+   past the viewport edge (and a sideways slide reads worse on a narrow
+   screen). Fall back to the vertical reveal. */
+@media (max-width: 639px) {
+  [data-reveal='left'],
+  [data-reveal='right'] {
+    transform: translate3d(0, 28px, 0);
+  }
+}
 [data-reveal='scale'] {
   transform: scale(0.94);
 }

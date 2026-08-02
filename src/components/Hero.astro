@@ -8,6 +8,14 @@ const t = useTranslations(locale);
 const orbiting = ['Rust', 'React', 'Deep Learning', 'Docker'];
 ---
 
+<style>
+  /* One switch: the `no-image` class is set by the <img> onerror handler when
+     public/portrait.png is absent, and swaps the photo for the monogram. */
+  [data-portrait] .portrait-fallback { display: none; }
+  [data-portrait].no-image .portrait-fallback { display: grid; }
+  [data-portrait].no-image .portrait-img { display: none; }
+</style>
+
 <section id="hero" class="noise relative flex min-h-[100svh] items-center overflow-hidden pt-20">
   <!-- 3D neural core -->
   <div data-hero-canvas-wrap class="pointer-events-none absolute inset-0 -z-10">
@@ -118,11 +126,17 @@ const orbiting = ['Rust', 'React', 'Deep Learning', 'Docker'];
             aria-hidden="true"
           ></div>
 
-          <!-- Frame -->
-          <div class="relative size-full overflow-hidden rounded-[2rem] border border-line bg-linear-to-b from-surface-2 to-surface">
-            <!-- Shown until public/portrait.png exists (see scripts/remove-bg.py) -->
-            <div class="absolute inset-0 grid place-items-center overflow-hidden">
-              <div class="pointer-events-none absolute inset-0 grid-bg opacity-60" aria-hidden="true"></div>
+          <!-- Stage. Clipped, so it holds only the backdrop — the portrait
+               itself sits outside it and is free to break the top edge. -->
+          <div class="absolute inset-0 overflow-hidden rounded-[2rem] border border-line bg-linear-to-b from-surface-2 to-surface">
+            <div class="absolute inset-0 grid-bg opacity-50" aria-hidden="true"></div>
+            <div
+              class="absolute inset-x-0 bottom-0 h-3/4 bg-[radial-gradient(ellipse_at_50%_112%,var(--glow-a),transparent_68%)]"
+              aria-hidden="true"
+            ></div>
+
+            <!-- Only if public/portrait.png is missing (see scripts/remove-bg.py) -->
+            <div class="portrait-fallback absolute inset-0 place-items-center">
               {[0, 1, 2].map((i) => (
                 <span
                   class="absolute rounded-full border border-ember/15"
@@ -132,24 +146,27 @@ const orbiting = ['Rust', 'React', 'Deep Learning', 'Docker'];
               ))}
               <span class="relative font-display text-8xl font-bold tracking-tight text-ember/25">{profile.initials}</span>
             </div>
-
-            <img
-              src={profile.portrait}
-              alt={locale === 'fr'
-                ? `Portrait d’${profile.name}, développeur full-stack`
-                : `Portrait of ${profile.name}, full-stack developer`}
-              width="720"
-              height="900"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-              class="relative z-10 size-full object-cover object-top transition-transform duration-700 [.no-image_&]:opacity-0 motion-safe:group-hover:scale-[1.03]"
-              onerror="this.closest('[data-portrait]').classList.add('no-image')"
-            />
-
-            <!-- Bottom scrim -->
-            <div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-28 bg-linear-to-t from-bg via-bg/70 to-transparent" aria-hidden="true"></div>
           </div>
+
+          <!-- Ground shadow, so the cut-out doesn't look pasted on -->
+          <div
+            class="portrait-img pointer-events-none absolute inset-x-[18%] bottom-1 z-10 h-6 rounded-[50%] bg-black/45 blur-lg dark:bg-black/70"
+            aria-hidden="true"
+          ></div>
+
+          <img
+            src={profile.portrait}
+            alt={locale === 'fr'
+              ? `Portrait d’${profile.name}, développeur full-stack`
+              : `Portrait of ${profile.name}, full-stack developer`}
+            width="316"
+            height="496"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="portrait-img absolute bottom-0 left-1/2 z-20 h-full w-auto max-w-none -translate-x-1/2 object-contain object-bottom transition-transform duration-700 sm:h-[106%] motion-safe:group-hover:scale-[1.02]"
+            onerror="this.closest('[data-portrait]').classList.add('no-image')"
+          />
 
           <!-- Orbiting tech chips -->
           {orbiting.map((label, i) => (
