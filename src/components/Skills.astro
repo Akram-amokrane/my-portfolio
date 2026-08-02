@@ -1,6 +1,7 @@
 ---
 import SectionHeading from './SectionHeading.astro';
 import { techTags, useTranslations, type Locale } from '../i18n/content';
+import { brandIcons } from '../icons/brands';
 
 interface Props { locale: Locale }
 const { locale } = Astro.props;
@@ -12,6 +13,16 @@ const ICONS: Record<string, string> = {
   database: 'M12 3c4.4 0 8 1.3 8 3s-3.6 3-8 3-8-1.3-8-3 3.6-3 8-3ZM4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6',
   terminal: 'M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2ZM7.5 9.5 10 12l-2.5 2.5M13 15h4',
   brain: 'M9.5 3A3 3 0 0 0 7 7.5 3.5 3.5 0 0 0 4.5 11a3.5 3.5 0 0 0 1.2 2.6A3 3 0 0 0 5 16a3 3 0 0 0 4.5 2.6V3ZM14.5 3A3 3 0 0 1 17 7.5a3.5 3.5 0 0 1 2.5 3.5 3.5 3.5 0 0 1-1.2 2.6A3 3 0 0 1 19 16a3 3 0 0 1-4.5 2.6V3ZM12 3v18',
+};
+
+/** Outline glyphs for the technologies that have no brand mark. */
+const GLYPHS: Record<string, string> = {
+  api: 'M4 8h4M4 12h2M4 16h4M10 5h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2ZM13 9.5h4M13 14.5h4',
+  socket: 'M7 4v6M17 4v6M5 10h14v2a7 7 0 0 1-14 0v-2ZM12 19v3',
+  compose: 'M3 8.5 12 4l9 4.5-9 4.5-9-4.5ZM3 13l9 4.5 9-4.5M3 17.5 12 22l9-4.5',
+  layers: 'M12 3 3 7.5l9 4.5 9-4.5L12 3ZM3 12l9 4.5 9-4.5M3 16.5 12 21l9-4.5',
+  network: 'M12 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM5 15a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM19 15a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM12 7v4M12 11 6 15M12 11l6 4',
+  transfer: 'M4 8h11m0 0-3-3m3 3-3 3M20 16H9m0 0 3-3m-3 3 3 3',
 };
 
 const ACCENT: Record<string, string> = {
@@ -28,6 +39,42 @@ const ACCENT: Record<string, string> = {
     top: 50%;
     left: 50%;
     margin: 0;
+  }
+
+  /* Each chip carries its brand's light/dark colour inline; --brand picks the
+     one that stays legible against the current background. */
+  .tech {
+    --brand: var(--brand-l);
+  }
+  .dark .tech {
+    --brand: var(--brand-d);
+  }
+
+  .tech__mark {
+    color: var(--brand);
+    opacity: 0.72;
+    transition:
+      opacity 0.35s var(--ease-out-expo),
+      transform 0.35s var(--ease-out-expo);
+  }
+
+  .tech:hover {
+    border-color: color-mix(in oklab, var(--brand) 55%, transparent);
+    background: color-mix(in oklab, var(--brand) 9%, var(--surface));
+    box-shadow: 0 6px 20px -10px color-mix(in oklab, var(--brand) 70%, transparent);
+  }
+  .tech:hover .tech__mark {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tech__mark {
+      transition: none;
+    }
+    .tech:hover .tech__mark {
+      transform: none;
+    }
   }
 </style>
 
@@ -64,43 +111,54 @@ const ACCENT: Record<string, string> = {
         </p>
       </div>
 
-      <!-- Skill groups -->
+      <!-- Categories -->
       <div class="order-1 space-y-3.5 lg:order-2">
         {t.skills.groups.map((group, gi) => (
           <div
             data-reveal="left"
             style={`--reveal-delay:${gi * 70}ms`}
-            data-tilt="4"
             class="card spotlight noise relative overflow-hidden p-5 sm:p-6"
           >
-            <div class="flex items-center gap-3">
+            <div class="flex items-start gap-3.5">
               <span
-                class="grid size-9 shrink-0 place-items-center rounded-lg border border-line"
+                class="grid size-10 shrink-0 place-items-center rounded-xl border border-line"
                 style={`background:color-mix(in oklab, ${ACCENT[group.accent]} 12%, transparent); color:${ACCENT[group.accent]}`}
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-4.5" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-5" aria-hidden="true">
                   <path d={ICONS[group.icon]} stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </span>
-              <h3 class="font-display text-base font-semibold tracking-tight sm:text-lg">{group.title}</h3>
+
+              <div class="min-w-0">
+                <h3 class="font-display text-base font-semibold tracking-tight sm:text-lg">{group.title}</h3>
+                {/* Evidence, not a self-scored level. */}
+                <p class="mt-1 text-pretty text-[13px] leading-snug text-muted">{group.note}</p>
+              </div>
             </div>
 
-            <ul class="mt-4 space-y-2.5">
-              {group.skills.map((skill) => (
-                <li>
-                  <div class="flex items-baseline justify-between gap-3">
-                    <span class="text-sm font-medium">{skill.name}</span>
-                    <span class="font-mono text-[11px] text-faint">{skill.level}%</span>
-                  </div>
-                  <div class="mt-1.5 h-1 overflow-hidden rounded-full bg-surface-2">
-                    <div
-                      data-bar={skill.level}
-                      class="h-full origin-left rounded-full"
-                      style={`transform:scaleX(0); background:linear-gradient(90deg, ${ACCENT[group.accent]}, color-mix(in oklab, ${ACCENT[group.accent]} 45%, var(--cyan)))`}
-                    ></div>
-                  </div>
-                </li>
-              ))}
+            <ul class="mt-4 flex flex-wrap gap-2">
+              {group.skills.map((tech) => {
+                const brand = brandIcons[tech.icon];
+                return (
+                  <li
+                    class="tech inline-flex items-center gap-2 rounded-xl border border-line bg-surface-2/60 px-3 py-2 transition-[background-color,border-color,box-shadow] duration-350"
+                    style={brand
+                      ? `--brand-l:${brand.light};--brand-d:${brand.dark}`
+                      : `--brand-l:${ACCENT[group.accent]};--brand-d:${ACCENT[group.accent]}`}
+                  >
+                    {brand ? (
+                      <svg class="tech__mark size-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d={brand.path} />
+                      </svg>
+                    ) : (
+                      <svg class="tech__mark size-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <path d={GLYPHS[tech.icon] ?? GLYPHS.api} stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    )}
+                    <span class="whitespace-nowrap text-[13px] font-medium">{tech.name}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}

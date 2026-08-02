@@ -26,8 +26,18 @@ export const techTags = [
 ];
 
 type Stat = { value: string; label: string };
-type Skill = { name: string; level: number };
-type SkillGroup = { title: string; accent: 'ember' | 'cyan' | 'violet'; icon: string; skills: Skill[] };
+/** `icon` is either a key in src/icons/brands.ts or one of the outline
+ *  glyphs defined in Skills.astro (api, socket, compose, brain, …). */
+type Tech = { name: string; icon: string };
+/** `note` is deliberately evidence, not a self-assessed level: where the
+ *  category was actually used. A percentage nobody can verify says nothing. */
+type SkillGroup = {
+  title: string;
+  accent: 'ember' | 'cyan' | 'violet';
+  icon: string;
+  note: string;
+  skills: Tech[];
+};
 type Job = {
   role: string; org: string; period: string; place: string;
   current?: boolean; summary: string; points: string[]; tags: string[];
@@ -112,37 +122,44 @@ const fr: Content = {
     groups: [
       {
         title: 'Front-End', accent: 'ember', icon: 'layout',
+        note: 'Interfaces web, mobiles et de bureau livrées en production.',
         skills: [
-          { name: 'React', level: 92 }, { name: 'Angular', level: 82 },
-          { name: 'Tauri', level: 78 }, { name: 'TypeScript', level: 88 },
+          { name: 'React', icon: 'react' }, { name: 'Angular', icon: 'angular' },
+          { name: 'Tauri', icon: 'tauri' }, { name: 'TypeScript', icon: 'typescript' },
         ],
       },
       {
         title: 'Back-End', accent: 'cyan', icon: 'server',
+        note: 'APIs REST et temps réel, services système en Rust.',
         skills: [
-          { name: 'Rust', level: 85 }, { name: 'Express.js', level: 88 },
-          { name: 'REST API', level: 90 }, { name: 'WebSockets', level: 80 },
+          { name: 'Rust', icon: 'rust' }, { name: 'Express.js', icon: 'express' },
+          { name: 'Node.js', icon: 'node' }, { name: 'REST API', icon: 'api' },
+          { name: 'WebSockets', icon: 'socket' },
         ],
       },
       {
         title: 'Bases de données', accent: 'violet', icon: 'database',
+        note: 'Modélisation, migrations et optimisation de requêtes.',
         skills: [
-          { name: 'PostgreSQL', level: 86 }, { name: 'MySQL', level: 84 },
-          { name: 'MongoDB', level: 80 },
+          { name: 'PostgreSQL', icon: 'postgresql' }, { name: 'MySQL', icon: 'mysql' },
+          { name: 'MongoDB', icon: 'mongodb' },
         ],
       },
       {
         title: 'DevOps & Outils', accent: 'ember', icon: 'terminal',
+        note: 'Environnements conteneurisés, du développement au déploiement.',
         skills: [
-          { name: 'Docker', level: 84 }, { name: 'Docker Compose', level: 82 },
-          { name: 'Git', level: 92 },
+          { name: 'Docker', icon: 'docker' }, { name: 'Docker Compose', icon: 'compose' },
+          { name: 'Git', icon: 'git' },
         ],
       },
       {
         title: 'IA & Data', accent: 'cyan', icon: 'brain',
+        note: 'Article scientifique publié · enseigné de la L2 au M2.',
         skills: [
-          { name: 'Machine Learning', level: 88 }, { name: 'Deep Learning', level: 85 },
-          { name: 'Réseaux de neurones', level: 84 }, { name: 'Transfer Learning', level: 86 },
+          { name: 'Machine Learning', icon: 'brain' }, { name: 'Deep Learning', icon: 'layers' },
+          { name: 'Réseaux de neurones', icon: 'network' },
+          { name: 'Transfer Learning', icon: 'transfer' },
         ],
       },
     ],
@@ -307,37 +324,44 @@ const en: Content = {
     groups: [
       {
         title: 'Front-End', accent: 'ember', icon: 'layout',
+        note: 'Web, mobile and desktop interfaces shipped to production.',
         skills: [
-          { name: 'React', level: 92 }, { name: 'Angular', level: 82 },
-          { name: 'Tauri', level: 78 }, { name: 'TypeScript', level: 88 },
+          { name: 'React', icon: 'react' }, { name: 'Angular', icon: 'angular' },
+          { name: 'Tauri', icon: 'tauri' }, { name: 'TypeScript', icon: 'typescript' },
         ],
       },
       {
         title: 'Back-End', accent: 'cyan', icon: 'server',
+        note: 'REST and real-time APIs, systems services in Rust.',
         skills: [
-          { name: 'Rust', level: 85 }, { name: 'Express.js', level: 88 },
-          { name: 'REST API', level: 90 }, { name: 'WebSockets', level: 80 },
+          { name: 'Rust', icon: 'rust' }, { name: 'Express.js', icon: 'express' },
+          { name: 'Node.js', icon: 'node' }, { name: 'REST API', icon: 'api' },
+          { name: 'WebSockets', icon: 'socket' },
         ],
       },
       {
         title: 'Databases', accent: 'violet', icon: 'database',
+        note: 'Schema design, migrations and query optimisation.',
         skills: [
-          { name: 'PostgreSQL', level: 86 }, { name: 'MySQL', level: 84 },
-          { name: 'MongoDB', level: 80 },
+          { name: 'PostgreSQL', icon: 'postgresql' }, { name: 'MySQL', icon: 'mysql' },
+          { name: 'MongoDB', icon: 'mongodb' },
         ],
       },
       {
         title: 'DevOps & Tooling', accent: 'ember', icon: 'terminal',
+        note: 'Containerised environments, from development to deployment.',
         skills: [
-          { name: 'Docker', level: 84 }, { name: 'Docker Compose', level: 82 },
-          { name: 'Git', level: 92 },
+          { name: 'Docker', icon: 'docker' }, { name: 'Docker Compose', icon: 'compose' },
+          { name: 'Git', icon: 'git' },
         ],
       },
       {
         title: 'AI & Data', accent: 'cyan', icon: 'brain',
+        note: 'Published research paper · taught at undergraduate and graduate level.',
         skills: [
-          { name: 'Machine Learning', level: 88 }, { name: 'Deep Learning', level: 85 },
-          { name: 'Neural Networks', level: 84 }, { name: 'Transfer Learning', level: 86 },
+          { name: 'Machine Learning', icon: 'brain' }, { name: 'Deep Learning', icon: 'layers' },
+          { name: 'Neural Networks', icon: 'network' },
+          { name: 'Transfer Learning', icon: 'transfer' },
         ],
       },
     ],

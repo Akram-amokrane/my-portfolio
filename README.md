@@ -86,6 +86,29 @@ defined once for `:root` (light) and once for `.dark`, then mapped into Tailwind
 Fonts are self-hosted via `@fontsource` — no external requests: **Space Grotesk**
 (display), **Inter** (body), **JetBrains Mono** (labels).
 
+### Skills: evidence, not percentages
+
+The skills section deliberately has **no proficiency bars**. A self-assigned
+"React 92%" is unverifiable and reads as padding. Each category instead carries
+a one-line `note` saying where the stack was actually used, and the
+technologies appear as chips with their real brand marks.
+
+Brand paths and colours are vendored in
+[`src/icons/brands.ts`](src/icons/brands.ts) — generated, not hand-edited. To
+change the stack, edit `MAP` in
+[`scripts/gen-brand-icons.mjs`](scripts/gen-brand-icons.mjs) and run:
+
+```bash
+npm i --no-save simple-icons && node scripts/gen-brand-icons.mjs && npm uninstall simple-icons
+```
+
+The generator emits a `light` and a `dark` colour per mark, adjusting only the
+ones that would be illegible: over-light brands (React) are darkened along
+their own hue for the cream background, and near-black brands (Rust, Angular,
+Express) take the theme ink colour on the navy one. Technologies with no brand
+mark — REST API, WebSockets, the ML entries — use outline glyphs defined in
+`Skills.astro`.
+
 ---
 
 ## 3D & motion
