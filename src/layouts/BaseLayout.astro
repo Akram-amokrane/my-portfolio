@@ -1,0 +1,189 @@
+---
+import '../styles/global.css';
+import { profile, useTranslations, localePath, type Locale } from '../i18n/content';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const canonical = new URL(localePath(locale, '/'), Astro.site ?? 'https://akram-amokrane.vercel.app');
+const ogImage = new URL('/og.png', Astro.site ?? 'https://akram-amokrane.vercel.app');
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  jobTitle: locale === 'fr' ? 'Développeur Full-Stack & Ingénieur IA' : 'Full-Stack Developer & AI Engineer',
+  email: `mailto:${profile.email}`,
+  telephone: profile.phone,
+  url: canonical.href,
+  address: { '@type': 'PostalAddress', addressLocality: profile.city, addressRegion: 'Rhône-Alpes', addressCountry: 'FR' },
+  knowsLanguage: ['ar', 'kab', 'fr', 'en'],
+  knowsAbout: ['React', 'Rust', 'Machine Learning', 'Deep Learning', 'Docker', 'PostgreSQL', 'Tauri'],
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Université d’Évry Paris-Saclay' },
+    { '@type': 'CollegeOrUniversity', name: 'Université Abderrahmane Mira' },
+  ],
+};
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <meta name="author" content={profile.name} />
+    <meta name="theme-color" content="#05070d" />
+    <link rel="canonical" href={canonical.href} />
+
+    <link rel="alternate" hreflang="fr" href={new URL(localePath('fr', '/'), canonical).href} />
+    <link rel="alternate" hreflang="en" href={new URL(localePath('en', '/'), canonical).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(localePath('fr', '/'), canonical).href} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale === 'fr' ? 'fr_FR' : 'en_US'} />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={ogImage.href} />
+    <meta property="og:image:alt" content={t.meta.ogAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
+    <meta name="twitter:image" content={ogImage.href} />
+
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    {/* Resolve the theme before first paint — no flash of the wrong palette. */}
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          var theme = stored || (prefersLight ? 'light' : 'dark');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#05070d' : '#f6f5f1');
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+
+  <body class="bg-bg text-ink antialiased">
+    <a class="skip-link glass rounded-lg border border-line px-4 py-2 text-sm font-medium" href="#main">
+      {t.a11y.skip}
+    </a>
+
+    {/* Preloader */}
+    <div
+      data-preloader
+      class="fixed inset-0 z-[120] flex items-center justify-center bg-bg transition-opacity duration-700"
+    >
+      <div class="flex flex-col items-center gap-5">
+        <div class="relative grid size-16 place-items-center">
+          <span class="absolute inset-0 rounded-full border border-ember/30"></span>
+          <span class="absolute inset-0 animate-spin-slow rounded-full border-t-2 border-ember"></span>
+          <span class="font-display text-lg font-bold tracking-tight">{profile.initials}</span>
+        </div>
+        <span class="font-mono text-[11px] uppercase tracking-[0.3em] text-faint">
+          {locale === 'fr' ? 'Chargement' : 'Loading'}
+        </span>
+      </div>
+    </div>
+
+    {/* Reading progress */}
+    <div
+      data-progress
+      class="fixed inset-x-0 top-0 z-[110] h-0.5 origin-left scale-x-0 bg-linear-to-r from-ember via-ember-soft to-cyan"
+      aria-hidden="true"
+    ></div>
+
+    {/* Custom cursor */}
+    {/* opacity-0 until the first pointermove, otherwise both park at 0,0 */}
+    <div data-cursor-dot class="pointer-events-none fixed left-0 top-0 z-[115] hidden size-1.5 rounded-full bg-ember opacity-0 [&.is-live]:opacity-100" aria-hidden="true"></div>
+    <div data-cursor-ring class="pointer-events-none fixed left-0 top-0 z-[114] hidden size-8 rounded-full border border-ember/50 opacity-0 transition-[width,height,background-color,border-color] duration-300 [&.is-live]:opacity-100" aria-hidden="true"></div>
+
+    <slot />
+
+    {/* Back to top */}
+    <a
+      href="#hero"
+      data-to-top
+      aria-label={t.a11y.scrollTop}
+      class="no-print fixed bottom-6 right-6 z-[100] grid size-11 translate-y-4 place-items-center rounded-full border border-line bg-surface/80 opacity-0 backdrop-blur transition-all duration-500 hover:border-ember hover:text-ember [&.is-shown]:translate-y-0 [&.is-shown]:opacity-100"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-4" aria-hidden="true">
+        <path d="M12 19V5m0 0-6 6m6-6 6 6" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+
+    <script>
+      import '../scripts/main.ts';
+    </script>
+
+    <style is:global>
+      /* The theme toggle animates the *new* snapshot on top of the old one. */
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation: none;
+        mix-blend-mode: normal;
+      }
+      ::view-transition-old(root) {
+        z-index: 1;
+      }
+      ::view-transition-new(root) {
+        z-index: 9999;
+      }
+
+      /* Custom cursor: only once JS confirms a fine pointer. */
+      body.has-custom-cursor [data-cursor-dot],
+      body.has-custom-cursor [data-cursor-ring] {
+        display: block;
+      }
+      @media (pointer: fine) {
+        body.has-custom-cursor,
+        body.has-custom-cursor a,
+        body.has-custom-cursor button {
+          cursor: none;
+        }
+      }
+      [data-cursor-ring].is-hover {
+        width: 3rem;
+        height: 3rem;
+        background-color: color-mix(in oklab, var(--ember) 12%, transparent);
+        border-color: var(--ember);
+      }
+
+      [data-preloader].is-done {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* Without JS the preloader would cover the page forever. */
+      html:not(.js) [data-preloader] {
+        display: none;
+      }
+      html:not(.js) [data-reveal] {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+      }
+      html:not(.js) .char {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  </body>
+</html>

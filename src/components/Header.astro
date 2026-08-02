@@ -1,0 +1,145 @@
+---
+import { profile, useTranslations, localePath, otherLocale, type Locale } from '../i18n/content';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const other = otherLocale(locale);
+
+const links = [
+  { href: '#about', label: t.nav.about },
+  { href: '#skills', label: t.nav.skills },
+  { href: '#work', label: t.nav.work },
+  { href: '#research', label: t.nav.research },
+  { href: '#contact', label: t.nav.contact },
+];
+---
+
+<header
+  data-header
+  class="no-print fixed inset-x-0 top-0 z-[105] transition-[background-color,border-color,backdrop-filter] duration-500 [&.is-stuck]:border-b [&.is-stuck]:border-line [&.is-stuck]:bg-bg/72 [&.is-stuck]:backdrop-blur-xl"
+>
+  <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:h-[4.5rem]">
+    <!-- Monogram -->
+    <a
+      href={localePath(locale, '/')}
+      class="group flex items-center gap-2.5 font-display text-base font-bold tracking-tight"
+      aria-label={profile.name}
+    >
+      <span class="relative grid size-9 place-items-center rounded-lg border border-line bg-surface/60 transition-colors duration-300 group-hover:border-ember">
+        <span class="text-[13px] font-bold text-ember">{profile.initials}</span>
+        <span class="absolute inset-0 rounded-lg bg-ember/10 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"></span>
+      </span>
+      <span class="hidden sm:inline">
+        Akram <span class="text-muted font-medium">Amokrane</span>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden items-center gap-1 lg:flex">
+      {links.map((l) => (
+        <li>
+          <a
+            href={l.href}
+            data-nav-link
+            class="relative rounded-lg px-3.5 py-2 text-sm font-medium text-muted transition-colors duration-300 hover:text-ink [&.is-active]:text-ink"
+          >
+            {l.label}
+            <span class="pointer-events-none absolute inset-x-3.5 -bottom-px h-px origin-left scale-x-0 bg-ember transition-transform duration-300 [a.is-active>&]:scale-x-100"></span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="flex items-center gap-1.5">
+      <!-- Language -->
+      <a
+        href={localePath(other, '/')}
+        aria-label={t.a11y.switchLang}
+        title={t.a11y.switchLang}
+        class="grid h-9 place-items-center rounded-lg border border-line bg-surface/60 px-2.5 font-mono text-[11px] font-semibold uppercase tracking-wider text-muted transition-colors duration-300 hover:border-ember hover:text-ember"
+      >
+        <span class="flex items-center gap-1">
+          <span class="text-ink">{locale}</span>
+          <span class="text-faint">/</span>
+          <span>{other}</span>
+        </span>
+      </a>
+
+      <!-- Theme -->
+      <button
+        type="button"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label={t.a11y.toggleTheme}
+        title={t.a11y.toggleTheme}
+        class="group grid size-9 place-items-center rounded-lg border border-line bg-surface/60 text-muted transition-colors duration-300 hover:border-ember hover:text-ember"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="size-4 dark:hidden" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round" />
+        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="hidden size-4 dark:block" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <!-- CTA -->
+      <a
+        href="#contact"
+        class="ml-1 hidden items-center gap-2 rounded-lg bg-ember px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-ember-soft hover:shadow-[0_8px_24px_-8px] hover:shadow-ember/60 sm:inline-flex"
+      >
+        {t.nav.cta}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-3.5" aria-hidden="true">
+          <path d="M5 12h14m0 0-6-6m6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+
+      <!-- Burger -->
+      <button
+        type="button"
+        data-menu-toggle
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label={t.nav.menu}
+        class="grid size-9 place-items-center rounded-lg border border-line bg-surface/60 text-muted transition-colors duration-300 hover:border-ember hover:text-ember lg:hidden"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="size-4" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile menu -->
+<div
+  id="mobile-menu"
+  data-mobile-menu
+  class="no-print pointer-events-none fixed inset-0 z-[104] translate-y-[-100%] bg-bg/97 backdrop-blur-2xl transition-transform duration-600 [transition-timing-function:cubic-bezier(0.76,0,0.24,1)] lg:hidden [&.is-open]:pointer-events-auto [&.is-open]:translate-y-0"
+>
+  <div class="flex h-full flex-col justify-center px-8 pt-16">
+    <ul class="flex flex-col gap-1">
+      {links.map((l, i) => (
+        <li>
+          <a
+            href={l.href}
+            class="group flex items-baseline gap-4 border-b border-line py-4 font-display text-3xl font-semibold tracking-tight transition-colors duration-300 hover:text-ember sm:text-4xl"
+          >
+            <span class="font-mono text-xs font-normal text-faint">0{i + 1}</span>
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a
+      href="#contact"
+      class="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-ember px-6 py-4 text-base font-semibold text-white"
+    >
+      {t.nav.cta}
+    </a>
+
+    <p class="mt-8 font-mono text-xs text-faint">{profile.email}</p>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead?: string;
+  align?: 'left' | 'center';
+  index?: string;
+}
+const { eyebrow, title, lead, align = 'left', index } = Astro.props;
+---
+
+<div class:list={['max-w-3xl', align === 'center' && 'mx-auto text-center']}>
+  <div class:list={['flex items-center gap-3', align === 'center' && 'justify-center']} data-reveal>
+    {index && <span class="font-mono text-xs text-faint">{index}</span>}
+    <span class="h-px w-8 bg-ember"></span>
+    <span class="eyebrow">{eyebrow}</span>
+  </div>
+
+  <h2
+    data-reveal
+    style="--reveal-delay:70ms"
+    class="mt-4 text-balance font-display text-[clamp(1.85rem,4.6vw,3.15rem)] font-bold leading-[1.06] tracking-[-0.03em]"
+  >
+    {title}
+  </h2>
+
+  {lead && (
+    <p data-reveal style="--reveal-delay:130ms" class="mt-4 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+      {lead}
+    </p>
+  )}
+</div>

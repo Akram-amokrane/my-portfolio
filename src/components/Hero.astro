@@ -1,0 +1,202 @@
+---
+import { profile, techTags, useTranslations, type Locale } from '../i18n/content';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+
+const orbiting = ['Rust', 'React', 'Deep Learning', 'Docker'];
+---
+
+<section id="hero" class="noise relative flex min-h-[100svh] items-center overflow-hidden pt-20">
+  <!-- 3D neural core -->
+  <div data-hero-canvas-wrap class="pointer-events-none absolute inset-0 -z-10">
+    <canvas data-hero-canvas class="size-full"></canvas>
+    <!-- Static fallback if WebGL is unavailable -->
+    <div class="absolute inset-0 hidden place-items-center [.webgl-failed_&]:grid" aria-hidden="true">
+      <div class="size-[min(70vw,34rem)] rounded-full bg-[radial-gradient(circle_at_50%_45%,var(--glow-a),transparent_62%)] blur-2xl"></div>
+    </div>
+  </div>
+
+  <!-- Ambient wash + grid -->
+  <div class="pointer-events-none absolute inset-0 -z-20 grid-bg [mask-image:radial-gradient(ellipse_at_center,#000_15%,transparent_72%)]" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -left-40 top-1/4 -z-20 size-[32rem] rounded-full bg-[var(--glow-a)] blur-[110px]" data-parallax="-18" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-32 bottom-10 -z-20 size-[26rem] rounded-full bg-[var(--glow-b)] blur-[110px]" data-parallax="12" aria-hidden="true"></div>
+
+  <!-- Legibility scrim: the particle field is beautiful but it must not fight the copy. -->
+  <div
+    class="pointer-events-none absolute inset-y-0 left-0 -z-[5] hidden w-[64%] lg:block"
+    style="background:linear-gradient(to right, var(--bg) 0%, color-mix(in oklab, var(--bg) 90%, transparent) 45%, transparent 100%)"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute inset-0 -z-[5] lg:hidden"
+    style="background:linear-gradient(to bottom, color-mix(in oklab, var(--bg) 92%, transparent) 0%, color-mix(in oklab, var(--bg) 70%, transparent) 55%, transparent 100%)"
+    aria-hidden="true"
+  ></div>
+
+  <div class="mx-auto w-full max-w-7xl px-5 sm:px-8">
+    <div class="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8">
+      <!-- Copy -->
+      <div data-hero-copy class="relative">
+        <!-- Availability -->
+        <p data-reveal class="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/50 px-3.5 py-1.5 text-xs font-medium backdrop-blur">
+          <span class="relative flex size-2">
+            <span class="absolute inline-flex size-full rounded-full bg-emerald-500" style="animation: pulse-ring 2s ease-out infinite"></span>
+            <span class="relative inline-flex size-2 rounded-full bg-emerald-500"></span>
+          </span>
+          {t.hero.status}
+        </p>
+
+        <p data-reveal style="--reveal-delay:80ms" class="mt-7 font-mono text-sm text-muted">
+          {t.hero.greeting}
+        </p>
+
+        <h1
+          data-split
+          class="mt-2 font-display text-[clamp(2.6rem,8.5vw,5.75rem)] font-bold leading-[0.92] tracking-[-0.035em]"
+          style="perspective:800px"
+        >{profile.name}</h1>
+
+        <!-- Rotating role -->
+        <div
+          data-reveal
+          style="--reveal-delay:140ms"
+          class="mt-5 flex min-h-9 items-center gap-3"
+        >
+          <span class="h-px w-8 shrink-0 bg-ember sm:w-12"></span>
+          <p data-roles={JSON.stringify(t.hero.roles)} class="font-display text-lg font-semibold tracking-tight sm:text-2xl">
+            <span data-roles-text class="gradient-text">{t.hero.roles[0]}</span><span class="caret ml-0.5 font-normal text-ember">_</span>
+          </p>
+        </div>
+
+        <p data-reveal style="--reveal-delay:200ms" class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted sm:text-lg">
+          {t.hero.tagline}
+        </p>
+
+        <!-- CTAs -->
+        <div data-reveal style="--reveal-delay:260ms" class="mt-9 flex flex-wrap items-center gap-3">
+          <a
+            href="#contact"
+            data-magnetic="0.25"
+            class="group inline-flex items-center gap-2.5 rounded-xl bg-ember px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_34px_-12px] shadow-ember/70 transition-colors duration-300 hover:bg-ember-soft sm:text-base"
+          >
+            {t.hero.ctaPrimary}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+              <path d="M5 12h14m0 0-6-6m6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+
+          <a
+            href="#work"
+            data-magnetic="0.18"
+            class="inline-flex items-center gap-2.5 rounded-xl border border-line-strong px-6 py-3.5 text-sm font-semibold transition-colors duration-300 hover:border-ember hover:text-ember sm:text-base"
+          >
+            {t.hero.ctaSecondary}
+          </a>
+        </div>
+
+        <!-- Location -->
+        <p data-reveal style="--reveal-delay:320ms" class="mt-8 flex items-center gap-2 font-mono text-xs text-faint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="size-3.5" aria-hidden="true">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          {t.hero.locationLabel}
+        </p>
+      </div>
+
+      <!-- Portrait -->
+      <div data-reveal="scale" style="--reveal-delay:260ms" class="relative mx-auto w-full max-w-[22rem] lg:max-w-none">
+        <div data-portrait class="group relative aspect-4/5 w-full">
+          <!-- Glow -->
+          <div class="absolute -inset-8 rounded-[3rem] bg-[radial-gradient(circle_at_50%_35%,var(--glow-a),transparent_65%)] blur-2xl" aria-hidden="true"></div>
+
+          <!-- Rotating conic ring -->
+          <div
+            class="absolute -inset-1 rounded-[2rem] opacity-70 [background:conic-gradient(from_0deg,var(--ember),transparent_28%,var(--cyan)_52%,transparent_78%,var(--ember))] [mask:linear-gradient(#000_0_0)_content-box,linear-gradient(#000_0_0)] [mask-composite:exclude] [padding:1.5px] motion-safe:animate-spin-slow"
+            aria-hidden="true"
+          ></div>
+
+          <!-- Frame -->
+          <div class="relative size-full overflow-hidden rounded-[2rem] border border-line bg-linear-to-b from-surface-2 to-surface">
+            <!-- Shown until public/portrait.png exists (see scripts/remove-bg.py) -->
+            <div class="absolute inset-0 grid place-items-center overflow-hidden">
+              <div class="pointer-events-none absolute inset-0 grid-bg opacity-60" aria-hidden="true"></div>
+              {[0, 1, 2].map((i) => (
+                <span
+                  class="absolute rounded-full border border-ember/15"
+                  style={`width:${45 + i * 22}%;aspect-ratio:1;animation:spin-slow ${18 + i * 9}s linear infinite ${i % 2 ? 'reverse' : ''}`}
+                  aria-hidden="true"
+                ></span>
+              ))}
+              <span class="relative font-display text-8xl font-bold tracking-tight text-ember/25">{profile.initials}</span>
+            </div>
+
+            <img
+              src={profile.portrait}
+              alt={locale === 'fr'
+                ? `Portrait d’${profile.name}, développeur full-stack`
+                : `Portrait of ${profile.name}, full-stack developer`}
+              width="720"
+              height="900"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              class="relative z-10 size-full object-cover object-top transition-transform duration-700 [.no-image_&]:opacity-0 motion-safe:group-hover:scale-[1.03]"
+              onerror="this.closest('[data-portrait]').classList.add('no-image')"
+            />
+
+            <!-- Bottom scrim -->
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-28 bg-linear-to-t from-bg via-bg/70 to-transparent" aria-hidden="true"></div>
+          </div>
+
+          <!-- Orbiting tech chips -->
+          {orbiting.map((label, i) => (
+            <span
+              class:list={[
+                'absolute z-30 hidden rounded-full border border-line bg-surface/85 px-3 py-1.5 font-mono text-[11px] font-medium shadow-lg backdrop-blur-md sm:block',
+                i === 0 && '-left-6 top-[18%]',
+                i === 1 && '-right-4 top-[38%]',
+                i === 2 && '-left-10 bottom-[26%]',
+                i === 3 && '-right-6 bottom-[12%]',
+              ]}
+              style={`animation: float-y ${5.5 + i * 0.7}s ease-in-out ${i * 0.45}s infinite`}
+            >
+              <span class="mr-1.5 inline-block size-1.5 rounded-full" style={`background:${i % 2 ? 'var(--cyan)' : 'var(--ember)'}`}></span>
+              {label}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech marquee -->
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 border-t border-line/60 bg-bg/40 py-3 backdrop-blur-sm" aria-hidden="true">
+    <div class="flex w-max animate-marquee gap-8 motion-reduce:animate-none">
+      {[0, 1].map(() => (
+        <div class="flex shrink-0 gap-8">
+          {techTags.map((tag) => (
+            <span class="flex items-center gap-8 font-mono text-xs uppercase tracking-widest text-faint">
+              {tag}
+              <span class="size-1 rounded-full bg-ember/50"></span>
+            </span>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <a
+    href="#about"
+    class="group absolute bottom-20 left-5 hidden items-center gap-3 rounded-full border border-line bg-surface/70 px-4 py-2 text-faint backdrop-blur-md transition-colors duration-300 hover:border-ember hover:text-ember sm:left-8 lg:flex"
+    aria-label={t.hero.scroll}
+  >
+    <span class="font-mono text-[10px] uppercase tracking-[0.28em]">{t.hero.scroll}</span>
+    <span class="relative h-7 w-4 rounded-full border border-line-strong">
+      <span class="absolute left-1/2 top-1 size-1 -translate-x-1/2 rounded-full bg-ember motion-safe:animate-[float-y_1.8s_ease-in-out_infinite]"></span>
+    </span>
+  </a>
+</section>
