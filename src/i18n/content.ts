@@ -11,7 +11,6 @@ export const profile = {
   phoneHref: '+33751495975',
   city: 'Lyon',
   region: 'Rhône-Alpes, France',
-  legacyPortfolio: 'https://akram-amokrane.vercel.app/',
   paper: 'https://hal.science/hal-04219806v1',
   /** Drop a background-free PNG here (see scripts/remove-bg.py). */
   portrait: '/portrait.png',
@@ -62,7 +61,7 @@ export type Content = {
   languages: { eyebrow: string; title: string; items: Lang[] };
   contact: {
     eyebrow: string; title: string; lead: string;
-    emailLabel: string; phoneLabel: string; locationLabel: string; portfolioLabel: string;
+    emailLabel: string; phoneLabel: string; locationLabel: string;
     cta: string; copy: string; copied: string;
   };
   footer: { built: string; rights: string; backToTop: string };
@@ -252,7 +251,7 @@ const fr: Content = {
     lead:
       "Une idée de projet, un poste à pourvoir ou simplement envie d’échanger sur Rust et le deep learning ? Ma boîte mail est ouverte.",
     emailLabel: 'E-mail', phoneLabel: 'Téléphone',
-    locationLabel: 'Localisation', portfolioLabel: 'Ancien portfolio',
+    locationLabel: 'Localisation',
     cta: 'Envoyer un e-mail',
     copy: 'Copier l’adresse', copied: 'Copié !',
   },
@@ -442,7 +441,7 @@ const en: Content = {
     lead:
       'A project in mind, a role to fill, or just want to talk about Rust and deep learning? My inbox is open.',
     emailLabel: 'Email', phoneLabel: 'Phone',
-    locationLabel: 'Location', portfolioLabel: 'Previous portfolio',
+    locationLabel: 'Location',
     cta: 'Send an email',
     copy: 'Copy address', copied: 'Copied!',
   },

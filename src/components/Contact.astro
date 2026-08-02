@@ -26,13 +26,6 @@ const details = [
     value: `${profile.city}, ${profile.region}`,
     icon: 'M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z M15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z',
   },
-  {
-    label: t.contact.portfolioLabel,
-    value: 'akram-amokrane.vercel.app',
-    href: profile.legacyPortfolio,
-    external: true,
-    icon: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM3.6 9h16.8M3.6 15h16.8M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z',
-  },
 ];
 ---
 
@@ -80,11 +73,15 @@ const details = [
         const Tag = item.href ? 'a' : 'div';
         return (
           <Tag
-            {...(item.href ? { href: item.href, ...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {}) } : {})}
+            {...(item.href ? { href: item.href } : {})}
             data-reveal="scale"
             style={`--reveal-delay:${i * 70}ms`}
             data-tilt="4"
-            class="card spotlight noise group relative flex items-center gap-4 overflow-hidden p-5"
+            class:list={[
+              'card spotlight noise group relative flex items-center gap-4 overflow-hidden p-5',
+              // Odd count would otherwise orphan the last card in a 2-up grid.
+              details.length % 2 === 1 && i === details.length - 1 && 'sm:col-span-2',
+            ]}
           >
             <span class="grid size-10 shrink-0 place-items-center rounded-lg border border-line bg-ember/10 text-ember transition-colors duration-300 group-hover:bg-ember group-hover:text-white">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="size-4.5" aria-hidden="true">
